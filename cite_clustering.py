@@ -67,13 +67,22 @@ def get_cite(keyword):
         tags2 = soup.find_all("div", {"class": "gs_a"})
         for tag2 in tags2:
             p_year = tag2.text
-            p_year = re.sub(r'\D', '', p_year)
-            if len(p_year) == 0:
+            result = re.findall(r"\d+", p_year)
+
+            if len(result) == 0:
                 continue
-            if len(p_year) > 4:
-              #c += 1
-              continue
-            p_year = int(float(p_year)) #対象論文を引用した論文の発行年 p_year
+            if len(result) == 1:
+              p_year = int(float(result[0])) #対象論文を引用した論文の発行年 p_year
+            
+            flag = True
+            if len(result) > 1:
+              for r in result:
+                if len(r) == 4 and int(float(r)) >= year and  int(float(r)) <= 2020:
+                  p_year = int(float(r))
+                  flag = False
+                  break
+              if flag:
+               continue
 
             if p_year - year < 0:
                 continue
