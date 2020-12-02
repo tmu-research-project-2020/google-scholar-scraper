@@ -8,55 +8,69 @@ from matplotlib import pyplot as plt
 import time
 import timeit
 import numpy as np
+import difflib
 from sklearn.linear_model import LinearRegression
 
-
-def get_cite(keyword):
-    number = 1
-    html_doc = requests.get("https://scholar.google.co.jp/scholar?hl=ja&as_sdt=0%2C5&num=" + str(number) + "&q=" + keyword).text
-    soup = BeautifulSoup(html_doc, "html.parser") # BeautifulSoupの初期化
-
-    #論文タイトル取得
-    tag1 = soup.find("h3", {"class": "gs_rt"})
-    title = tag1.text.replace("[HTML]","")
-
-    #発行年取得
-    tag2 = soup.find("div", {"class": "gs_a"})
-    year = tag2.text
-    year = re.sub(r'\D', '', year)
-    
-
-    #引用数取得
-    tags3 = soup.find_all(text=re.compile("引用元"))  # citation
-    for tag3 in tags3:
-        citations = tag3.replace("引用元","")
-        ci_num = int(citations)
-
-    print('論文タイトル: ' + title)
-    print('発行年: ' + year)
-    print('被引用回数: ' + str(ci_num))
-
-    #論文ID取得(IDは引用元をクロールするのに必要)
+def get_conf(keyword0, key_conf, conference):
+    keyword = keyword0.replace(' ', '+')
+    number = 10
+    html_doc = requests.get("https://scholar.google.co.jp/scholar?hl=ja&as_sdt=0%2C5as_vis=1&num=" + str(number) + "&q=" + keyword + "+" + key_conf).text
+    soup = BeautifulSoup(html_doc, "html.parser")
+    tags1 = soup.find_all("h3", {"class": "gs_rt"})
+    tags2 = soup.find_all("div", {"class": "gs_a"})
+    tags3 = soup.find_all(text=re.compile("引用元")) 
     tags4 = soup.find_all("div", {"class": "gs_fl"})
-    for tag4 in tags4:
+    thre_diff = 0.5
+    title_list = []
+    conf_list =[]
+    year_list = []
+    p_id_list = []
+    ci_num_list = []
+    for i in range(number):
+        conf = tags2[i].text
+        year = re.sub(r'\D', '', conf)
+        conf = re.sub(r'\d', '', conf)
+        diff = difflib.SequenceMatcher(None, conf, conference).ratio()
+        if diff > thre_diff:
+            conf_list.append(i)
+            year_list.append(int(year[0:4]))
+    tags3 = soup.find_all(text=re.compile("引用元")) 
+    for i in conf_list:
+        citations = tags3[i].replace("引用元","")
+        ci_num_list.append(int(citations))
+        title_list.append(tags1[i].text.replace("[HTML]",""))
         try:
-            elem = tag4.find_all('a')[2]['href']
+            elem = elem = tags4[i*2+1].find_all('a')[2]['href']
             a = 15
             while True:
                 if elem[a] == '&':
                     break
                 a+=1
-            p_id = elem[15:a]
+            p_id_list.append(elem[15:a])
         except:
-            print('')
+            print('')   
+    cite_years, citations = get_cite(conf_list, title_list, year_list, ci_num_list, p_id_list)
+    return cite_years, citations
+
+def get_cite(conf_list, title_list, year_list, ci_num_list, p_id_list):
+    for i in range(len(conf_list)):
+        print('paper number: ' + str(i))
+        print('論文タイトル: ' + title_list[i])
+        print('発行年: ' + str(year_list[i]))
+        print('被引用回数: ' + str(ci_num_list[i]))
+        print('----------------------------------')
+    num = input('Select paper number: ')
+    num = int(num)
 
     sleep(1)
-
     #引用論文発行年獲得、listに格納
-
     base_url = 'https://scholar.google.com/scholar?start={}&hl=ja&as_sdt=2005&sciodt=0,5&cites={}&scipsc='
-    year = int(year) #対象論文発行年
-
+    year = year_list[num] #対象論文発行年
+    ci_num = ci_num_list[num]
+    title = title_list[num]
+    if ci_num > 100:
+        ci_num  = 100
+    p_id = p_id_list[num]
 
     count = [0 for i in range(2020-year+1)] #発行年から2020年までの引用数格納用のlist作成
     #c = 0
@@ -64,9 +78,9 @@ def get_cite(keyword):
         url = base_url.format(str(n), p_id)
         html_doc = requests.get(url).text
         soup = BeautifulSoup(html_doc, "html.parser")
-        tags2 = soup.find_all("div", {"class": "gs_a"})
-        for tag2 in tags2:
-            p_year = tag2.text
+        tags5 = soup.find_all("div", {"class": "gs_a"})
+        for tag5 in tags5:
+            p_year = tag5.text
             result = re.findall(r"\d+", p_year)
 
             if len(result) == 0:
@@ -132,7 +146,9 @@ def plot_citations(title, cite_years, citations):
     return
 
 
-keyword = "microphone array beamforming tutorial"
-cite_years, citations = get_cite(keyword)
+keyword0 = "blind source separation"
+key_conf = "ICASSP"
+conference = "IEEE International Conference on Acoustics, Speech, and Signal Processing"
+cite_years, citations = get_conf(keyword0, key_conf, conference)
 coef = fit_reg(cite_years, citations, reg=LinearRegression())
 print(f"coef: {coef}")
