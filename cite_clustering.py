@@ -10,7 +10,8 @@ import timeit
 import numpy as np
 import difflib
 from sklearn.linear_model import LinearRegression
-
+import csv
+import pprint
 def get_conf(keyword0, key_conf, conference):
     keyword = keyword0.replace(' ', '+')
     number = 10
@@ -20,7 +21,7 @@ def get_conf(keyword0, key_conf, conference):
     tags2 = soup.find_all("div", {"class": "gs_a"})
     tags3 = soup.find_all(text=re.compile("引用元")) 
     tags4 = soup.find_all("div", {"class": "gs_fl"})
-    thre_diff = 0.5
+    thre_diff = 0.1
     title_list = []
     conf_list =[]
     year_list = []
@@ -69,7 +70,8 @@ def get_cite(conf_list, title_list, year_list, ci_num_list, p_id_list):
     ci_num = ci_num_list[num]
     title = title_list[num]
     if ci_num > 100:
-        ci_num  = 100
+        ci_num  = input("Number of citations: ")
+        ci_num = int(ci_num)
     p_id = p_id_list[num]
 
     count = [0 for i in range(2020-year+1)] #発行年から2020年までの引用数格納用のlist作成
@@ -146,9 +148,14 @@ def plot_citations(title, cite_years, citations):
     return
 
 
-keyword0 = "blind source separation"
-key_conf = "ICASSP"
-conference = "IEEE International Conference on Acoustics, Speech, and Signal Processing"
+keyword0 = ""
+key_conf = "VLDB"
+conference = "International Conference on Very Large Data Bases"
 cite_years, citations = get_conf(keyword0, key_conf, conference)
 coef = fit_reg(cite_years, citations, reg=LinearRegression())
 print(f"coef: {coef}")
+cite_years = [i[0] for i in cite_years]
+with open('cite_years.csv', 'w') as f:
+    writer = csv.writer(f)
+    writer.writerow(cite_years)
+    writer.writerow(citations)
