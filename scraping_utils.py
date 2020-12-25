@@ -18,6 +18,11 @@ import pandas as pd
 import requests
 from sklearn.linear_model import LinearRegression
 
+def get_snippet(soup):
+    tags = soupl.find_all("div", {"class": "gs_rs"})
+    snippet_list = [tags[i].text for i in range(len(tags))]
+    return snippet_list
+
 def get_title_and_url(soup):
     tags1 = soup.find_all("h3", {"class": "gs_rt"})
     title_list = []
@@ -83,16 +88,20 @@ def get_id(soup):
             print("")
     return p_id_list
 
-number = 5
-keyword = "machine learning"
-html_doc = requests.get("https://scholar.google.co.jp/scholar?hl=ja&as_sdt=0%2C5&num=" + str(number) + "&q=" + keyword).text
-soup = BeautifulSoup(html_doc, "html.parser") # BeautifulSoupの初期化
-title_list,url_list = get_title_and_url(soup)
-writer_list,year_list = get_writer_and_year(soup)
-ci_num_list = get_citations(soup)
-p_id_list = get_id(soup)
+  
+if __name__ == "__main__":
+    number = 5
+    keyword = "machine learning"
+    html_doc = requests.get("https://scholar.google.co.jp/scholar?hl=ja&as_sdt=0%2C5&num=" + str(number) + "&q=" + keyword).text
+    soup = BeautifulSoup(html_doc, "html.parser") # BeautifulSoupの初期化
+    title_list,url_list = get_title_and_url(soup)
+    writer_list,year_list = get_writer_and_year(soup)
+    ci_num_list = get_citations(soup)
+    p_id_list = get_id(soup)
 
-print(title_list,url_list)
-print(writer_list,year_list)
-print(ci_num_list)
-print(p_id_list)
+    print(title_list,url_list)
+    print(writer_list,year_list)
+    print(ci_num_list)
+    print(p_id_list)
+
+
