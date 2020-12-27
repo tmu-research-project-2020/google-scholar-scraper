@@ -175,14 +175,15 @@ def plot_citations(title, cite_years, citations):
     return
 
 
-keyword0 = ""
-key_conf = "VLDB"
-conference = "International Conference on Very Large Data Bases"
-cite_years, citations = get_conf(keyword0, key_conf, conference)
-coef = fit_reg(cite_years, citations, reg=LinearRegression())
-print(f"coef: {coef}")
-cite_years = [i[0] for i in cite_years]
-with open("cite_years.csv", "w") as f:
-    writer = csv.writer(f)
-    writer.writerow(cite_years)
-    writer.writerow(citations)
+if __name__ == "__main__":
+    keyword0 = ""
+    key_conf = "VLDB"
+    conference = "International Conference on Very Large Data Bases"
+    cite_years, citations = get_conf(keyword0, key_conf, conference)
+    coef = fit_reg(cite_years, citations, reg=LinearRegression())
+    print(f"coef: {coef}")
+    cite_years = [i[0] for i in cite_years]
+    with open("cite_years.csv", "w") as f:
+        writer = csv.writer(f)
+        writer.writerow(cite_years)
+        writer.writerow(citations)
