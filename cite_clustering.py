@@ -19,7 +19,7 @@ from bs4 import BeautifulSoup
 from sklearn.linear_model import LinearRegression
 
 
-def get_conf(keyword0, key_conf, conference):
+def get_conf(keyword0, key_conf, conference=None):
     keyword = keyword0.replace(" ", "+")
     number = 10
     html_doc = requests.get(
@@ -37,6 +37,7 @@ def get_conf(keyword0, key_conf, conference):
     tags4 = soup.find_all("div", {"class": "gs_fl"})
     thre_diff = 0.1
     title_list = []
+    author_list = []
     conf_list = []
     year_list = []
     p_id_list = []
@@ -45,8 +46,12 @@ def get_conf(keyword0, key_conf, conference):
         conf = tags2[i].text
         year = re.sub(r"\D", "", conf)
         conf = re.sub(r"\d", "", conf)
-        diff = difflib.SequenceMatcher(None, conf, conference).ratio()
-        if diff > thre_diff:
+        if conference is not None:
+            diff = difflib.SequenceMatcher(None, conf, conference).ratio()
+            if diff > thre_diff:
+                conf_list.append(i)
+                year_list.append(int(year[0:4]))
+        else:
             conf_list.append(i)
             year_list.append(int(year[0:4]))
     tags3 = soup.find_all(text=re.compile("引用元"))
