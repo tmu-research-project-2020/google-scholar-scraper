@@ -147,7 +147,7 @@ def get_id(soup):
 def scraping_papers(url):
     """ scrape 100 papers
     :param url: target url
-    :return: title_list, url_list, writer_list, year_list, ci_num_list, snippet_list
+    :return: title_list, url_list, writer_list, year_list, ci_num_list, p_id_list, snippet_list
     """
     url_each = url.split("&")
     url_each[0] = url_each[0] + "start={}"
@@ -158,6 +158,7 @@ def scraping_papers(url):
     writer_list = []
     year_list = []
     ci_num_list = []
+    p_id_list = []
     snippet_list = []
 
     for page in range(0, 100, 10):
@@ -169,36 +170,40 @@ def scraping_papers(url):
         title_list_tmp, url_list_tmp = get_title_and_url(soup)
         writer_list_tmp, year_list_tmp = get_writer_and_year(soup)
         ci_num_list_tmp = get_citations(soup)
+        p_id_list_tmp = get_id(soup)
         snippet_list_tmp = get_snippet(soup)
-
+        
         title_list.extend(title_list_tmp)
         url_list.extend(url_list_tmp)
         writer_list.extend(writer_list_tmp)
         year_list.extend(year_list_tmp)
         ci_num_list.extend(ci_num_list_tmp)
+        p_id_list.extend(p_id_list_tmp)
         snippet_list.extend(snippet_list_tmp)
 
         sleep(np.random.randint(5, 10))
-    return title_list, url_list, writer_list, year_list, ci_num_list, snippet_list
+    return title_list, url_list, writer_list, year_list, ci_num_list, p_id_list, snippet_list
 
 
-def write_csv(title_list, url_list, writer_list, year_list, ci_num_list, snippet_list):
+
+def write_csv(conf, title_list, url_list, writer_list, year_list, ci_num_list, p_id_list, snippet_list):
     """ write csv
-    :param title_list, url_list, writer_list, year_list, ci_num_list, snippet_list:
+    :param conf, title_list, url_list, writer_list, year_list, ci_num_list, snippet_list:
     :return:
     """
-    labels = ["title", "writer", "year", "citations", "url", "snippet"]
-    with open("paper.csv", "w") as f:
+    labels = ["conference", "title", "writer", "year", "citations", "url", "paper ID", "snippet"]
+    path = "conf_csv/" + conf + ".csv"
+    with open(path, "w") as f:
         csv_writer = csv.writer(f)
         csv_writer.writerow(labels)
-        for title, url, writer, year, ci_num, snippet in zip(
-            title_list, url_list, writer_list, year_list, ci_num_list, snippet_list
+        for title, url, writer, year, ci_num, p_id, snippet in zip(
+            title_list, url_list, writer_list, year_list, ci_num_list, p_id_list, snippet_list
         ):
-            csv_writer.writerow([title, writer, year, ci_num, url, snippet])
-
+            csv_writer.writerow([conf, title, writer, year, ci_num, url, p_id,  snippet])
 
 if __name__ == "__main__":
-    url = make_url(keyword="machine learning", conf=None, author=None)
+    conf = "VLDB"
+    url = make_url(keyword="None", conf=conf, author=None)
     print(f"url: {url}")
-    title_list, url_list, writer_list, year_list, ci_num_list, snippet_list = scraping_papers(url)
-    write_csv(title_list, url_list, writer_list, year_list, ci_num_list, snippet_list)
+    title_list, url_list, writer_list, year_list, ci_num_list, p_id_list, snippet_list = scraping_papers(url)
+    write_csv(conf, title_list, url_list, writer_list, year_list, ci_num_list, p_id_list, snippet_list)
