@@ -47,7 +47,7 @@ def get_snippet(soup):
     :param soup: parsed html by BeautifulSoup
     :return: snippet_list
     """
-    tags = soupl.find_all("div", {"class": "gs_rs"})
+    tags = soup.find_all("div", {"class": "gs_rs"})
     snippet_list = [tags[i].text for i in range(len(tags))]
     return snippet_list
 
@@ -62,8 +62,8 @@ def get_title_and_url(soup):
     url_list = []
     for tag1 in tags1:
         # タイトル取得
-        # PDF, 書籍, B, HTML のタグを除去
-        title = re.sub(r"\[(PDF|書籍|B|HTML)\]", "", tag1.text)
+        # PDF, 書籍, B, HTML, 引用, Cのタグを除去
+        title = re.sub(r"\[(PDF|書籍|B|HTML|引用|C)\]", "", tag1.text)
         # 空白区切りを廃止
         title = "_".join(title.split(" "))
         if title[0] == "_":
@@ -71,8 +71,11 @@ def get_title_and_url(soup):
         title_list.append(title)
 
         # url取得
-        url = tag1.select("a")[0].get("href")
-        url_list.append(url)
+        try:
+            url = tag1.select("a")[0].get("href")
+            url_list.append(url)
+        except IndexError:
+            url_list.append(None)
     return title_list, url_list
 
 
@@ -97,7 +100,11 @@ def get_writer_and_year(soup):
         # 論文発行年取得
         year = tag2.text
         year = re.sub(r"\D", "", year)
-        year_list.append(year)
+        # yearが5桁以上だった場合の例外処理
+        if len(year) > 4:
+            year_list.append(year[len(year)-4 : len(year)])
+        else:
+            year_list.append(year)
     return writer_list, year_list
 
 
@@ -119,7 +126,7 @@ def get_id(soup):
     """ obtain paper id from soup
     :param soup: parsed html by BeautifulSoup
     :return: ci_num_list
-    """ 
+    """
     tags4 = soup.find_all("div", {"class": "gs_fl"})
     p_id_list = []
     for tag4 in tags4:
@@ -138,7 +145,7 @@ def get_id(soup):
 
 
 def scraping_papers(url):
-    """ scrape 100 papers 
+    """ scrape 100 papers
     :param url: target url
     :return: title_list, url_list, writer_list, year_list, ci_num_list, snippet_list
     """
@@ -154,6 +161,7 @@ def scraping_papers(url):
     snippet_list = []
 
     for page in range(0, 100, 10):
+        print("Loading next {} results".format(page+10))
         url_tmp = url_base.format(page)
         html_doc = requests.get(url_tmp).text
         soup = BeautifulSoup(html_doc, "html.parser")
