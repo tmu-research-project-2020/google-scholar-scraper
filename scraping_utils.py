@@ -89,12 +89,15 @@ def get_writer_and_year(soup):
     year_list = []
     for tag2 in tags2:
         # 著者取得
+        """
         writer = tag2.text
         writer = re.sub(r"\d", "", writer)
         for char in range(0, len(writer)):
             if writer[char] == "-":
                 writer = writer[2 : char - 1]
                 break
+        """
+        writer = tag2.text.split("\xa0- ")[0]
         writer_list.append(writer)
 
         # 論文発行年取得
@@ -202,8 +205,8 @@ def write_csv(conf, title_list, url_list, writer_list, year_list, ci_num_list, p
             csv_writer.writerow([conf, title, writer, year, ci_num, url, p_id,  snippet])
 
 if __name__ == "__main__":
-    conf = "VLDB"
-    url = make_url(keyword="None", conf=conf, author=None)
+    conf = "ICASSP"
+    url = make_url(keyword=None, conf=conf, author=None)
     print(f"url: {url}")
     title_list, url_list, writer_list, year_list, ci_num_list, p_id_list, snippet_list = scraping_papers(url)
     write_csv(conf, title_list, url_list, writer_list, year_list, ci_num_list, p_id_list, snippet_list)

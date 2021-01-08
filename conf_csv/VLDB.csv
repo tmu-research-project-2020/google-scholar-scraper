@@ -1,397 +1,102 @@
 conference,title,writer,year,citations,url,paper ID,snippet
-VLDB,STING:_A_statistical_information_grid_approach_to_spatial_data_mining,"Wang, J Yang, R Muntz",1997,1956,http://suraj.lums.edu.pk/~cs536a04/handouts/STING.pdf,18399849071317195831,"… Potential distribution types are: normal, uniform, exponential, and so on. The value NONE
-is assigned if the distribution type is unknown … set before the hierarchical structure is built),
-then we set dist as NONE; otherwise, we keep the original type … 
-"
-VLDB,Finding_intensional_knowledge_of_distance-based_outliers," Knorr, RT Ng",1999,662,http://www.academia.edu/download/45215609/Finding_Intensional_Knowledge_of_Distanc20160429-4547-dz5g0r.pdf,16198633439049355368,"… Abstract Existing studies on outliers focus only on the identi cation aspect; none
-provides any inten- sional knowledge of the outliers|by which we mean a description
-or an explanation of why an identi ed outlier is exceptional … 
-"
-VLDB,The_transaction_concept:_Virtues_and_limitations,Gray,1981,1341,https://www.hpl.hp.com/techreports/tandem/TR-81.3.pdf,15553426371650547409,"… Consisteney: the transaction must obey legal protocols. Atomicity: it either happeus or it does
-not; either all are bound by the contract or none are. Durability: once a transaction is committed …
-or none of the effects of the transaction survive and the transaction is said to abort … 
-"
-VLDB,Distinct_sampling_for_highly-accurate_answers_to_distinct_values_queries_and_event_reports, Gibbons,2001,283,http://www.vldb.org/conf/2001/P541.pdf,18208159645671603334,"… matching the template. dence), and supported by error guarantees. Unfortunately,
-none of the previous work in approximate query answering provides fast, provably
-good estimates for common distinct values queries. The most well … 
-"
-VLDB,An_object_data_model_with_roles,"Albano, R Bergamini, G Ghelli, R Orsini",1993,298,https://www.researchgate.net/profile/Giorgio_Ghelli/publication/225035699_Abstract_An_Object_Data_Model_with_Roles/links/09e415098f985afa7d000000.pdf,12145157181436997683,"… type). The basic types are Bool. String, Int, Real, Any, None, and Null. Each … types.
-The instances of basic types are all disjoint. with a notable exception: the value
-unknown (of type None), whichbelongs to any type whatsoever. A … 
-"
-VLDB,REHIST:_Relative_error_histogram_construction_algorithms,"Guha, K Shim, J Woo",2004,119,https://books.google.co.jp/books?hl=ja&lr=lang_ja|lang_en&id=R780l9ETyw8C&oi=fnd&pg=PA300&dq=None+source:VLDB&ots=XJC2OUzX2h&sig=gOP2GOkW80Aw1KrcsA0ovyKxFY4,5374799679724850517,"… None of these schemes provide satis- factory guarantees–and we provide evidence that the
-difficulty may lie in the choice of wavelets as the representation scheme. In this paper, we
-consider histogram construc- tion for the known relative error measures … 
-"
-VLDB,Mining_frequent_itemsets_using_support_constraints,"Wang, Y He, J Han",2000,185,https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.37.5880&rep=rep1&type=pdf,13524932932340270290,"… Consider what happens if the minimum support of fcoffee;sugar;teag is 2% and the minimum
-support of fcoffee;teag, fsugar; teag, fcoffee;sugarg is 5%: it is possible that fcoffee;sugar;teag
-is frequent with respect to its minimum support, but none of fcoffee;teag, fsugar; teag … 
-"
-VLDB,User-adaptive_exploration_of_multidimensional_data,Sarawagi,2000,159,http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.58.2468&rep=rep1&type=pdf,10249347342467815792,"… There are local store managers who are very familiar with the details of just one store; top
-executives who know top-level trends but none of the details and recent hire analysts who know
-nothing about the data but need to subsequently understand a lot of it … 
-"
-VLDB,Mining_multi-dimensional_constrained_gradients_in_data_cubes,"Dong, J Han, J Lam, J Pei, K Wang",2001,84,http://www.vldb.org/conf/2001/P321.pdf,3554644693947933093,"… If the gradient measure is an anti-monotonic function, one can explore the following property:
-if the measure m of a cell c is no greater than τ, none of c's descendants can have the measure
-m greater than τ; and if the measure m of a cell c is no less than τ, none of c's ancestor … 
-"
-VLDB,Cache-conscious_concurrency_control_of_main-memory_indexes_on_shared-memory_multiprocessor_systems," Cha, S Hwang, K Kim, K Kwon",2001,76,http://www.vldb.org/conf/2001/P181.pdf,18408797639689712404,"… However, none of these indexes took account of concurrency control, which is crucial for running
-the real-world main memory database applications involving index updates and taking advantage
-of the off-the-shelf multiprocessor systems for scaling up the performance of such … 
-"
-VLDB,"Distributed_Concurrency_Control_Performance:_A_Study_of_Algorithms,_Distribution,_and_Replication."," Carey, M Livny",1988,155,https://books.google.co.jp/books?hl=ja&lr=lang_ja|lang_en&id=RtrSEU9HEX8C&oi=fnd&pg=PA13&dq=None+source:VLDB&ots=t-K9Ust_ch&sig=4cZvpokX6OA_OkMBHMBWY9EjZyg,10020010791350034184,"… We have implemented a total of five concurrency con- trol managers, including four
-for the concurrency control algo- rithms described in Section 2 and one that we will
-refer to as NONE. NONE has a message-passing structure … 
-"
-VLDB,Approximating_aggregate_queries_about_web_pages_via_random_walks,Ba,2000,165,http://nike.psu.edu/classes/ist501/latest/ref/random-walk-vldb-2000.pdf,8659677008761425862,"… (The connectedness property ensures that the random walk has a limiting distribution, and
-undirectedness and regularity guarantee that this distribution is uni- form.) Unfortunately the
-natural web graph W initially meets none of these three conditions, but we can mod- ify it to … 
-"
-VLDB,Improved_unnesting_algorithms_for_join_aggregate_SQL_queries,Muralikrishna,1992,173,http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.115.5921&rep=rep1&type=pdf,5579375678435469582,"… IT EMP& 1 f Icount] None of the fi'S in the above table are equal to 1000 or 2000. Notice
-that in this example, for every c value we have generated all possible f values, and hence
-the predicate (Rf = TEMPz.f) in Query 12 will always be satisfied … 
-"
-VLDB,Queries_independent_of_updates," Levy, Y Sagiv",1993,273,http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.96.6183&rep=rep1&type=pdf,4503299026297532456,"… CA Tdriver(X) A A < 18 or the conjunction C A ydriver(Z) A B < 18 is satisfiable. Since none of
-the above is satisfiable, the algorithm would conclude that the query is independent of the update.
-Now consider the following update program 142(X, Y, A) :- inCar(X, Y, A), ldriver(X) … 
-"
-VLDB,Atomicity_versus_anonymity:_Distributed_transactions_for_electronic_commerce," Tygar, A Gupta, O Shmueli, J Widom",1998,77,http://people.eecs.berkeley.edu/~tygar/papers/Atomicity_vs_anonymity.pdf,4334255469678978514,"… Particular notable in this paper are the properties of atomicity and anonymity. 2.1.
-Atomicity Atomicity allows us to logically link multiple operations so that either all of
-them are executed or none of them are. For example, in transaction … 
-"
-VLDB,Mining_Approximate_Top-K_Subspace_Anomalies_in_Multi-Dimensional_Time-Series_Data.,"Li, J Han",2007,61,http://www.datascienceassn.org/sites/default/files/Mining%20Approximate%20Top-K%20Subspace%20Anomalies%20in%20Multi-Dimensional%20Time-Series%20Data.pdf,5411690348631421957,"… An example is shown in Figure 2. The “All” or apex cuboid holds a single cell where all its values
-among (a1, a2,...,an) are ∗. On the other extreme, the base cuboid at the top holds cells where
-none of its (a1, a2,...,an) values is ∗. ABC A B C AB All BC AC … 
-"
-VLDB,"CORAL:_Control,_relations_and_logic","Ramakrishnan, D Srivastava, S Sudarshan",1992,262,https://www.researchgate.net/profile/Divesh_Srivastava2/publication/2292288_CORAL---Control_Relations_and_Logic/links/55edd51d08aef559dc437c57/CORAL---Control-Relations-and-Logic.pdf,8401777912385966891,"… purpose DBPL. CORAL supports tuples with variables (non- ground terms). While
-Prolog systems and some pro- duction rule systems support non-ground terms,
-none of the deductive database systems do so. This facility is … 
-"
-VLDB,EIRENE:_Interactive_design_and_refinement_of_schema_mappings_via_data_examples,"Alexe, B Cate, PG Kolaitis, WC Tan",2011,43,https://dl.acm.org/doi/abs/10.14778/3402755.3402784,14585914133632601469,"… 10.00. I1 J1 … Data Examples Fitting GLAV schema mapping or report “none exists” Ik Jk … Step
-2 (User modifies existing data example (a)): Patient(x,y,z,u) ! Doctor(x,v) "" #w,w' (History(x,z,u,
-w) ! Physician(w,v,w')) Step 3 (User adds another data example (b)): None exists … 
-"
-VLDB,Multi-join_optimization_for_symmetric_multiprocessors," Shekita, HC Young, KL Tan",7366,147,http://160592857366.free.fr/joe/ebooks/ShareData/Multi-Join%20Opttimization%20for%20Symmetric%20MultiProcessors%2010.1.1.98.837.pdf,450566000601667637,"… in [ZO] for SMPs. None of those studies considered the full variety of execution trees
-that are examined here, however. These include left-deep, right-deep, deep, seg-
-mented right-deep, and bushy trees. In addition to dynamic … 
-"
-VLDB,Estimation_of_query-result_distribution_and_its_application_in_parallel-join_load_balancing,"Poosala, YE Ioannidis",1996,93,https://www.madgik.di.uoa.gr/sites/default/files/2018-06/vldb96_pp448-459.pdf,6951140845403267222,"… None of the current systems, however, permit good estimates of the distributions of
-intermediate relations. The resulting es- timates are often inaccurate and may undermine
-the validity of the particular application using these estimates … 
-"
-VLDB,Supporting_incremental_join_queries_on_ranked_inputs,"Natsev, YC Chang, JR Smith, CS Li, JS Vitter",2001,255,http://www.vldb.org/conf/2001/P281.pdf,11030113766373439774,"… Current database systems do not support such queries effi- ciently, and while multimedia
-search systems support some form of ranked join queries, to the best of our knowledge,
-none support join queries with user-defined join predicates … 
-"
-VLDB,Indexing_multi-dimensional_uncertain_data_with_arbitrary_probability_density_functions,"Tao, R Cheng, X Xiao, WK Ngai, B Kao, S Prabhakar",2005,369,http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.122.2301&rep=rep1&type=pdf,6329141319810652265,"… They present an interesting taxon- omy of novel query types, together with the corresponding
-processing strategies. An I/O efficient algorithm for near- est neighbor search is proposed in
-[5]. None of the above works considers prob-range retrieval. Cheng et al … 
-"
-VLDB,OLAP_over_uncertain_and_imprecise_data,"Burdick, P Deshpande, TS Jayram, R Ramakrishnan…",2005,150,https://www.researchgate.net/profile/Prasad_Deshpande4/publication/226518023_OLAP_over_uncertain_and_imprecise_data/links/55260ee40cf295bf160ec90e.pdf,3895489286120044995,"… The earliest work on aggregate queries over imprecise data is [6], and it was followed by
-[18,7,22]; however, none of these papers consider data-level hierarchies (which are central to
-OLAP) … Fact p6 mentions no dealer name, and is assigned the value NONE … 
-"
-VLDB,Keyword_search_on_external_memory_data_graphs," Dalvi, M Kshirsagar, S Sudarshan",2008,175,https://dl.acm.org/doi/abs/10.14778/1453856.1453982,4962383987447065429,"… A naive use of in-memory algorithms on very large graphs mapped to virtual memory would result
-in a very significant IO cost, as can be seen from the experimental results in Section 7. Related work
-is described in more detail in Section 2. None of the earlier work has … 
-"
-VLDB,Coloring_away_communication_in_parallel_query_optimization,"Hasan, R Motwani",1995,66,http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.105.9083&rep=rep1&type=pdf,11832385461947989598,"Page 1. Coloring Away Communication in Parallel Query Optimization WAQAR HASAN
-Stanford University and Hewlett-Packard Laboratories hasan@cs.stanford.edu RAJEEV
-MOTWANI Department of Computer Science Stanford … 
-"
-VLDB,Materialized_Views_Selection_in_a_Multidimensional_Database.,"Baralis, S Paraboschi, E Teniente",1997,547,https://www.researchgate.net/profile/Ernest_Teniente/publication/2600059_Materialized_View_Selection_in_a_Multidimensional_Database/links/0fcfd50aa0b5c7ad97000000.pdf,1518795054128430790,"… The second aspect is the presence of hierarchies, which none Figure 2: Data-cube lattice with
-associated queries … An MD-lattice defines all possible ways of comput- ing queries that can be
-defined on an MDDB in terms \ / 0 none Figure 3: MD-lattice of the Store dimension … 
-"
-VLDB,Extrav:_boosting_graph_processing_near_storage_with_a_coherent_accelerator,"Lee, H Kim, S Yoo, K Choi, HP Hofstee…",2017,34,https://dl.acm.org/doi/abs/10.14778/3137765.3137776,7830778713976759238,"… However, none of these explore the out-of-memory graph processing domain, and the use of
-coherent accelerators … All those related works assume in-memory processing, and none of them
-consider providing a new abstraction to the CPU or amplifying the storage bandwidth … 
-"
-VLDB,RP*:_A_family_of_order_preserving_scalable_distributed_data_structures,"Litwin, MA Neimat, D Schneider",1994,185,http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.82.1166&rep=rep1&type=pdf,499290134068860912,"… With respect to related work, there was no proposal of distributed ordered file structure
-without an index. There were several proposals for parallel distributed B- trees, eg,
-[MS90], [MS91], [JK93], but none defined an SDDS. The … 
-"
-VLDB,On_Efficiently_Implementing_SchemaSQL_on_an_SQL_Database_System.,"S Lakshmanan, F Sadri, SN Subramanian",1999,80,https://www.vldb.org/conf/1999/P45.pdf,11771988729070617420,"… None of our strate- gies requires additions/modifications to the existing set of plan
-operators used by today's RDBMS … None of these pa- pers has considered the
-implementation of SchemaSQL or a variant, on a single DBMS … 
-"
-VLDB,The_use_of_information_capacity_in_schema_integration_and_translation," Miller, YE Ioannidis, R Ramakrishnan",1993,282,https://pdfs.semanticscholar.org/c10f/15974e5af4e2dd4ef648eb9561a7af23191e.pdf,1780492265533408108,"… None of the classes of mappings discussed in the literature has been shown to guarantee
-this [H~186]. In fact, existing systems operate at the schema level (using transformations
-between schema components) rather than at the instance level … 
-"
-VLDB,Swarm:_Mining_relaxed_temporal_moving_object_clusters,"Li, B Ding, J Han, R Kays",2010,374,https://dl.acm.org/citation.cfm?id=1920934,10176621846576590565,"… consecutive timestamps. Second, although the problem is defined using the similar
-form of frequent pattern mining [1, 11], none of previous work [1, 11, 25, 23, 19, 21]
-solves exactly the same problem as finding swarms. Because … 
-"
-VLDB,Streaming_algorithms_for_k-core_decomposition," Saríyüce, B Gedik, G Jacque",2013,135,https://dl.acm.org/doi/abs/10.14778/2536336.2536344,10626991882181804157,"… Applying this recursively, we must reach a vertex whose K value is increased due to gaining a
-new neighbor. However, for S2, there is no such vertex since only reachable vertices whose K
-values have increased are in S2 and none of them have their degrees changed … 
-"
-VLDB,Clustering_techniques_for_minimizing_external_path_length," Diwan, S Rane, S Seshadri, S Sudarshan",1996,58,https://pdfs.semanticscholar.org/4fe4/59bbf7654d4c62a76301479206e9835392b0.pdf,6720544837229518427,"… There has been a lot of work on clustering in the area of object-oriented databases, but none
-of these addresses the issue of worst-case path lengths for access structures … None of these
-addresses the issue of worst-case path lengths for access structures. 4 Tree Structures … 
-"
-VLDB,Capturing_and_querying_multiple_aspects_of_semistructured_data," Dyreson, MH Böhlen, CS Jensen",1999,61,http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.121.8558&rep=rep1&type=pdf,16951243084242990170,"… For example, only one paper has addressed support for temporal data [CAW98], and none
-(to the best of our knowledge) have addressed data security or quality … Below, we discuss
-a partial list of such properties. None of them are required in a label … 
-"
-VLDB,Deep_web_integration_with_visqi,"Kabisch, EC Dragut, C Yu, U Leser",2010,37,https://dl.acm.org/doi/abs/10.14778/1920841.1921053,5420626947189548054,"… Furthermore, none of them supports all three steps of integration, none is equipped with
-a data set for testing as large as that of VisQI … To our knowledge, none of the existing Deep
-Web integration systems (eg [5, 7]) has such a component … 
-"
-VLDB,Performance_evaluation_of_an_adaptive_and_robust_load_control_method_for_the_avoidance_of_data_contention_thrashing,"Mönkeberg, G Weikum",1992,67,http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.104.7607&rep=rep1&type=pdf,6395819692330563405,"… none none lksaction admission policy … However, none of these simulation studies captures the
-diversity and fluc- tuations of real-life workloads, which is the real touch- stone for adaptive load
-control methods. 3 Exploiting Advance Knowledge of lhnsaction Properties … 
-"
-VLDB,DBMS_research_at_a_crossroads:_The_vienna_update,"Stonebraker, R Agrawal, U Dayal, EJ Neuhold…",1993,141,http://eolo.cps.unizar.es/Docencia/doctorado/Articulos/InvestigacionBD/1993-Vienna_Update.pdf,3004092020100263762,"… model. new data models of any kind, and interfaces between a DBMS and Prolog.
-Gcncral recursion was unpopular because none of the participants had ever seen
-an application that needed this capability. The participants … 
-"
-VLDB,The_long-term_preservation_of_authentic_electronic_records,Duranti,2001,17,http://www.vldb.org/conf/2001/P625.pdf,17472112379417696891,"… Further, it is virtually impossible to deliver any preserved electronic record in such a way that
-none of its elements have changed … After that, one faces the need to demonstrate that none of
-the changes affected the ability to prove the identity and integrity of the record … 
-"
-VLDB,"Runtime_measurements_in_the_cloud:_observing,_analyzing,_and_reducing_variance","Schad, J Dittrich, JA Quian",2010,724,https://dl.acm.org/doi/abs/10.14778/1920841.1920902,9774958707095974534,"… EC2 also offers Cloud- Watch [7] which provides monitoring for Amazon Web Ser- vices cloud
-resources. However, none of the above works fo- cuses on evaluating the possible performance
-variability in clouds or even give hints on how to reduce this variability … 
-"
-VLDB,Multidimensional_access_methods:_Trees_have_grown_everywhere," Sellis, N Roussopoulos, C Faloutsos",9972,64,http://www-2.cs.cmu.edu/~christos/PUBLICATIONS.OLDER/vldb87talk.pdf,8607245323842568747,"… Table R(A,B,C,Q) Relation tuple groupby(A,C) groupby(B) groupby(A,B) groupby(B,C)
-groupby(A) groupby(C) groupby(none) x relation tuples: points in the Nd space x groupby
-projections: also points x point data is very efficient for multidimensional indexing C T(a,b,c,q) … 
-"
-VLDB,HadoopDB:_an_architectural_hybrid_of_MapReduce_and_DBMS_technologies_for_analytical_workloads,"Abouzeid, K Bajd",2009,1208,https://dl.acm.org/doi/abs/10.14778/1687627.1687731,2058102324613934312,"… the database layer. SMS uses a rule-based SQL generator to recre- ate SQL from
-the relational operators. The query processing logic that could be pushed into the
-database layer ranges from none (each 926 Page 6. table is … 
-"
-VLDB,Building_efficient_query_engines_in_a_high-level_language,"Klonatos, C Koch, T Rompf, H Chafi",2014,129,https://dl.acm.org/doi/abs/10.14778/2732951.2732959,11118963220228843116,"… 4 val hm = HashMap[B,ArrayBuffer[Record]]() 5 var it: Iterator[Record] = null 6 def next() : Record = {
-7 var t: Record = null 8 if (it == null || !it.hasNext) { 9 t = rightChild.findFirst { e => 10
-hm.get(hash(e)) match { 11 case Some(hl) => it = hl.iterator; true 12 case None => it = null … 
-"
-VLDB,Database_compression_on_graphics_processors,"Fang, B He, Q Luo",2010,154,https://dl.acm.org/doi/abs/10.14778/1920841.1920927,6307174715260060775,"Page 1. Database Compression on Graphics Processors Wenbin Fang Hong Kong
-University of Science and Technology wenbin@cse.ust.hk Bingsheng He Nanyang
-Technological University he.bingsheng@gmail.com Qiong … 
-"
-VLDB,Integrity_maintenance_in_an_object-oriented_database," Jagadish, X Qian",1992,97,http://www.vldb.org/conf/1992/P469.PDF,8045823984623757821,"… each update. The recommended approach in an object-oriented database [ll] is
-to associate constraints with classes, and upon the update of an object to check
-each constraint associated with its class and none others. The … 
-"
-VLDB,RDF-3X:_a_RISC-style_engine_for_RDF,"Neumann, G Weikum",2008,694,https://dl.acm.org/doi/abs/10.14778/1453856.1453927,1565929709886200193,"… al. [1], none of the prior implementations could demonstrate con- vincing efficiency,
-failing to scale up towards large datasets and high load. [1 … layered. To our knowledge,
-none of them employs any RDF-native optimizations. [38 … 
-"
-VLDB,Logical_and_Physical_Versioning_in_Main_Memory_Databases.,"Rastogi, S Seshadri, P Bohannon, DW Leinbaugh…",1997,50,http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.412.5833&rep=rep1&type=pdf,4618176707669582691,"… However, none of the above techniques guarantees complete isolation of read-only transactions
-from up- date transactions in a system, since the access path 3A Ph.D. candidate at Rutgers
-University. Page 2. to the data could be modi ed by update transactions … 
-"
-VLDB,L/mrp:_A_buffer_management_strategy_for_interactive_continuous_data_flows_in_a_multimedia_dbms,"Moser, A Kraiss, W Klas",1995,88,http://www.vldb.org/conf/1995/P275.PDF,1327752920901892444,"… interactions. It should be possible to tune the buffer management strategy in its degree
-of interaction support to minimize buffer consumption. In the extreme of none interaction
-support it degenerates to a simple “Use&Toss” [4]. In … 
-"
-VLDB,Adapting_tpc-c_benchmark_to_measure_performance_of_multi-document_transactions_in_mongodb,Kamsky,2019,5,https://dl.acm.org/doi/abs/10.14778/3352063.3352140,15568511491190171478,"… While there exist many published and widely used benchmarks for RDBMS OLTP
-workloads, there are none specifically for document databases … Until the commit, none
-of the writes within transaction can be seen outside the trans- action … 
-"
-VLDB,Towards_practical_differential_privacy_for_SQL_queries,"Johnson, JP Near, D Song",2018,120,https://dl.acm.org/doi/abs/10.1145/3187009.3177733,13184513862730776173,"… challenge. Various mechanisms [14, 41–43, 45, 48] provide differential pri- vacy for
-some subsets of SQL-like queries but none support the ma- jority of queries in practice …
-setting. None of these techniques are based on local sensitivity … 
-"
-VLDB,"Annotating_and_searching_web_tables_using_entities,_types_and_relationships","Limaye, S Sarawagi…",2010,385,http://repository.ias.ac.in/100011/1/R118.pdf,10931449504975737188,"… In contrast, table cells referring to entities have negligible amounts of additional text. Given
-each table cell can map to several entities (or none), it is nontrivial to propose one or few
-types1 for a column that “explain” (most of) the cells in the column … 
-"
-VLDB,A_temporal-probabilistic_database_model_for_information_extraction,"Dylla, I Miliaraki, M Theobald",2013,53,https://dl.acm.org/doi/abs/10.14778/2556549.2556564,15376722164682316827,"… the database community. None of these systems however natively supports temporal
-data. The ma … are non-sequenced). Also, none of the currently available temporal
-database systems supports probabilistic data. Dedalus [3 … 
-"
-VLDB,Querying_and_mining_of_time_series_data:_experimental_comparison_of_representations_and_distance_measures,"Ding, G Trajcevski, P Scheuermann, X Wang…",2008,1395,https://dl.acm.org/doi/abs/10.14778/1454159.1454226,3409912346730171718,"… mea- sures that compare the i−th point of one time series to the i−th point of another as lock-step
-measures (eg, Euclidean distance and the other Lp norms), and distance measures that allow
-comparison of one-to-many points (eg, DTW) and one-to-many/one-to-none points (eg … 
-"
-VLDB,Constructing_an_interactive_natural_language_interface_for_relational_databases,"Li, HV Jagadish",2014,289,https://dl.acm.org/doi/abs/10.14778/2735461.2735468,10452143238034715488,"… The fundamental problem is that understanding natural language is hard. People may use slang
-words, tech- nical terms, and dialect-specific phrasing, none of which may be known to the system.
-Even without these, natural lan- guage is inherently ambiguous … 
-"
-VLDB,Memory-contention_responsive_hash_joins," Davison, G Graefe",1994,38,https://spl.cde.state.co.us/artemis/ucbserials/ucb51110internet/1993/ucb51110682internet.pdf,8722994275263925162,"… As long as sufficient memory is available, partitions may obtain new clusters and grow in size.
-When a partition needs additional memory but none is available, the resident partition with the
-highest partition number is spilled and retains only one cluster as an output buffer … 
-"
-VLDB,A_distributed_graph_engine_for_web_scale_RDF_data,"Zeng, J Yang, H Wang, B Shao, Z Wang",2013,335,https://dl.acm.org/doi/abs/10.14778/2535570.2488333,17264401254094483343,"… 33]. Unfor- tunately, none of these can be supported in current RDF systems, and
-one of the reasons is that they manage RDF data in some foreign forms (eg, relational
-tables or bitmap matrices) instead of its native graph form … 
-"
-VLDB,DeepTRANS:_a_deep_learning_system_for_public_bus_travel_time_estimation_using_traffic_forecasting,"Tran, MY Mun, M Lim, J Yamato, N Huh…",2020,88,https://dl.acm.org/doi/abs/10.14778/3415478.3415518,r=5681833317060946457,"… Although many statistical and machine learning methods have been proposed to estimate travel
-times, none of the methods consider utilizing predicted traffic information. Forecasting how
-congestion is going to evolve is critical for accurate travel time estimations … 
-"
-VLDB,On-the-fly_entity-aware_query_processing_in_the_presence_of_linkage,"Ioannou, W Nejdl, C Niederée…",2010,208,https://dl.acm.org/doi/abs/10.14778/1920841.1920898,13927407505831932381,"… When the original data is highly volatile, this process needs to be continuously repeated and it
-becomes inefficient. The second limitation is that none of these techniques gives 100% certain
-results … We claim that none of the above two approaches is fully desired … 
-"
-VLDB,An_experimental_comparison_of_pregel-like_graph_processing_systems,"Han, K Daudjee, K Ammar, MT Özsu…",2014,78,https://dl.acm.org/doi/abs/10.14778/2732977.2732980,2805918923735839492,"… Graph Storage master. Other Optimizations Model Library compute() Pregel C++ BSP N/A N/A
-No none Giraph Java BSP Netty Byte array, hash map Yes none GPS Java BSP MINA Arrays
-Yes LALP, dynamic migration Mizan C++ BSP MPICH C++ vectors No dynamic migration … 
-"
-VLDB,XSeek:_A_Semantic_XML_Search_Engine_Using_Keywords.,"Liu, J Walker, Y Chen",2007,294,http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.409.1129&rep=rep1&type=pdf,12973731021923509036,"… 1 An XML node is named as a VLCA node if its subtree contains matches to every keyword in
-the query, and none 1Alternatively, other approaches to compute VLCA nodes such as MLCA
-[7], Interconnection [2] can be incorporated seamlessly into XSeek for identifying and … 
-"
-VLDB,HYRISE:_a_main_memory_hybrid_storage_engine,"Grund, J Krüger, H Plattner, A Zeier…",2010,4,https://dl.acm.org/doi/abs/10.14778/1921071.1921077,3647258959053836706,"… None of these vendors have released detailed information about how their hybrid schemes work,
-and they do not appear to have database designers such as ours that can automate hybrid
-partitioning, but these products acknowledge the importance of hybrid designs such as … 
-"
-VLDB,"What_do_those_weird_XML_types_want,_anyway?",DeRose,1999,187,http://cs.brown.edu/vldb99/IndustrialSpeakerSlides/VLDB99-keynote.pdf,11932880117381184198,"… X Examples I've seen given this week: X Few with repetition X One with ordering X One with
-attributes X None with text spanning leaves X None with multiple analytical perspectives – (two
-audience questions) X No indirect containment X If XML examples come from RDBs … 
-"
-VLDB,Designing_A_Generalized_NF2_Model_with_an_SQL-Type_Language_Interface.,"Pistor, F Andersen",1986,136,http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.366.2177&rep=rep1&type=pdf,10593271517473630140,"… 1. A subset of the ADDRS table: 2. A set of tuples with one field, the cohtknt of which replicates
-an ADDRS t'uple. Strictly speaking, none of these interpretations is exactly mirrored by the
-structures provided by the strict NF' model. To justify the fiist viewthe keys … 
-"
-VLDB,Algebraic_Properties_of_Bag_Data_Types.,Albert,1991,754,http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.97.7657&rep=rep1&type=pdf,961904065004121801,"… ACCandBGC satisfy (p, then it is not selected. Either all copies of =+ (x EEA) < (x EE
-C) some 2 E B are selected, or none are. Finally, (6) through (9) demonstrate that
-u and \ and (z EE B) < (x EE C) are sufficient to define U and ft … 
-"
-VLDB,Automated_selection_of_materialized_views_and_indexes_in_SQL_databases,"Agrawal, S Chaudhuri, VR Narasayya",2000,164,http://www.cse.iitb.ac.in/infolab/Data/Courses/CS632/2017/2013/Papers/index-view-sel-vldb2000.pdf,1230153639822613926,"… Although one of the papers [11] studies the interaction of materialized views with indexes
-on materialized views, none of the papers consider interaction among selection of
-indexes on base tables and selection of materialized views … 
-"
-VLDB,Output_space_sampling_for_graph_patterns,"Al Hasan, MJ Zaki",2009,378,https://dl.acm.org/doi/abs/10.14778/1687627.1687710,11146547059014649870,"… For this graph dataset, none of the existing algorithms could finish in 2 full days
-for 50% support on a dual-core 2.2 GHz machine with 2GB of memory. [7] also
-reported similar problem with protein interaction network graphs … 
-"
-VLDB,TraClass_trajectory_classification_using_hierarchical_region-based_and_trajectory-based_clustering," Lee, J Han, X Li, H Gonzalez",2008,482,https://dl.acm.org/doi/abs/10.14778/1453856.1453972,14909965579715452106,"… 4.1 Definition of Region-Based Clusters A region-based cluster is formally defined through Defini-
-tions 3 and 4. This definition is very intuitive: a region- based cluster contains many of trajectory
-partitions of one major class, but very few (hopefully, none) of trajectory partitions of … 
-"
-VLDB,Maximal_vector_computation_in_large_data_sets,"Godfrey, R Shipley, J Gryz",2005,291,http://www.eecs.yorku.ca/research/techreports/2004/CS-2004-06.pdf,12424779558192453190,"… O(n) merges 4All points in A are marked so none will be thrown away … In addition to requiring
-O(n2) I/O's, every record will need to be compared against every other record. Every record is
-added to the window; none is ever removed. Each comparison costs k steps … 
-"
-VLDB,Discovering_data_quality_rules,"Chiang, RJ Miller",2008,52,https://dl.acm.org/doi/abs/10.14778/1453856.1453980,4595007836150256903,"… Both of these papers have assumed that the CFDs are known, which is not always true. Manual
-discovery of CFDs is a tedious process that involves searching the large space of attribute
-values. None of the previous work has focused on this problem … 
-"
-VLDB,Improving_adaptable_similarity_query_processing_by_using_approximations,"Ankerst, B Braunmüller, HP Kriegel, T Seidl",1998,46,https://www.researchgate.net/profile/Thomas_Seidl2/publication/221310233_Improving_Adaptable_Similarity_Query_Processing_by_Using_Approximations/links/09e4150b85be7b84a7000000.pdf,4381749280604952429,"Page 1. Improving Adaptable Similarity Query Processing by Using Approximations
-Mihael Ankerst, Bernhard Braunmüller, Hans-Peter Kriegel, Thomas Seidl Institute
-for Computer Science, University of Munich, Germany http … 
-"
-VLDB,Information_preserving_XML_schema_embedding,"Bohannon, W Fan, M Flaster, PPS Narayan",2005,39,http://homepages.inf.ed.ac.uk/wenfei/papers/vldb05-full.pdf,13099638069638566436,"… 2002; Melnik et al. 2003; Miller et al. 2001; Milo and Zohar 1998]; however, none has addressed
-invertibility and query preservation for XML. Most tools either focus on highly similar structures,
-or adopt a strict graph similarity model like bisimulation (see,, eg, [Abiteboul et al … 
-"
-VLDB,A_Functional_Programming_Approach_to_Deductive_Databases.,"Poulovassilis, C Small",1991,203,http://www.vldb.org/conf/1991/P491.PDF,7462820340818829473,"… None the less, knowledge represen- tation techniques other than first order logic are possi-
-ble, for example frames or production rules, and we believe they deserve further consideration
-as candidate paradigms for deductive databases. In particular we are … 
-"
-VLDB,Highly_available_transactions:_Virtues_and_limitations,"Bailis, A Davidson, A Fekete, A Ghodsi…",2013,63,https://dl.acm.org/doi/abs/10.14778/2732232.2732237,5290590427752770563,"… implemented correctly. However, none of the achievable models prevents concurrent
-modifications. 3. In … 5, 12]. None of these weak isolation models guarantees serializability,
-but, as we see below, their benefits are of- 1Data available … 
-"
-VLDB,Mostly-optimistic_concurrency_control_for_highly_contended_dynamic_workloads_on_a_thousand_cores,"Wang, H Kimura",2016,315,https://dl.acm.org/doi/abs/10.14778/3015274.3015276,8537087118195393217,"… Prior literature has studied physical lock contention [12, 18], but none has observed
-this much effect (eg, Johnson et. al [12] report up to 15% slowdown on 64 threads)
-or designed a system for such a high level of contention … 
-"
-VLDB,Graph_pattern_matching:_from_intractable_to_polynomial_time,"Fan, J Li, S Ma, N Tang, Y Wu, Y Wu",2010,40,https://dl.acm.org/doi/abs/10.14778/1920841.1920878,5621427267139227363,"… low edge-to-path mappings, but are still np-complete. None of these supports bounded
-connectivity or search conditions. Recently, bounded connectivity in graph patterns was
-con- sidered in [31]. It differs from this work in the following … 
-"
-VLDB,SMCQL:_secure_querying_for_federated_databases,"Bater, G Elliott, C Eggen, S Goel, A Kho…",2017,37,https://dl.acm.org/ft_gateway.cfm?id=3055334&type=pdf,13099427657864451468,"… For ex- ample, many hospitals are interested in pooling their medi- cal records for research, but
-none may disclose arbitrary pa- tient records to researchers or other healthcare providers … An
-expression may be labelled as low iff none of the attributes referenced in it are high … 
-"
-VLDB,Process_automation_as_the_foundation_for_e-business,"Casati, MC Shan",2000,228,http://www.vldb.org/conf/2000/P688.pdf,10335817807156461115,"… SAP, or PeopleSoft. Despite huge efforts by many of them aiming at covering the
-whole spectrum, none of them has yet provided a complete and satisfactory solution
-to all the challenges raised by e- business. Therefore, top … 
-"
-VLDB,Clash_of_the_titans:_Mapreduce_vs._spark_for_large_scale_data_analytics,"Shi, Y Qiu, UF Minhas, L Jiao, C Wang…",2015,201,https://dl.acm.org/doi/abs/10.14778/2831360.2831365,6093813074078132316,"Page 1. Clash of the Titans: MapReduce vs. Spark for Large Scale Data Analytics
-Juwei Shi‡, Yunjie Qiu†, Umar Farooq Minhas§, Limei Jiao†, Chen Wangd, Berthold
-Reinwald§, and Fatma ¨Ozcan§ ∗ †IBM Research - China … 
-"
-VLDB,Reasoning_about_record_matching_rules,"Fan, X Jia, J Li, S Ma",2009,67,https://dl.acm.org/doi/abs/10.14778/1687627.1687674,202115281370941808,"… None of these makes a key for matching t[Yc] and t [Yb], ie, we cannot match entire t[Yc] and
-t [Yb] by just comparing their email 407 Copyright 2009 VLDB Endowment, ACM
-978-1-60558-948-0/09/08 Page 2. c# SSN FN LN addr tel email gender type … 
-"
-VLDB,A_survey_and_experimental_comparison_of_distributed_SPARQL_engines_for_very_large_RDF_data,"Abdelaziz, R Harbi, Z Khayyat, P Kalnis",2017,138,https://dl.acm.org/doi/abs/10.14778/3151106.3151109,14517688371153249110,"… techniques for linked data. Finally, Ma et al. [40] survey techniques that use relational
-and NoSQL databases to store large RDF data. None of the aforementioned surveys
-contain any ex- perimental evaluation. Motivated by the lack … 
-"
-VLDB,"Entity_extraction,_linking,_classification,_and_tagging_for_social_media:_a_wikipedia-based_approach","Gattani, DS Lamba, N Garera, M Tiwari…",2013,14,https://dl.acm.org/doi/abs/10.14778/2536222.2536237,1371583346735957540,"… However, little, if any, has been published about these systems, and as far as we know, none
-of these deployed systems has been specifically tailored for social media. In this paper we
-describe an end-to-end industrial sys- tem that extracts, links, classifies, and tags social data … 
-"
-VLDB,Fuzzy_joins_in_MapReduce:_an_experimental_study,"Kimmett, V Srinivasan, A Thomo",2015,177,https://dl.acm.org/doi/abs/10.14778/2824032.2824049,6723339371924916979,"… Their algorithms come with complete theoretical analysis, however, no exper- imental evaluation
-is provided. They argue that there is a tradeoff between communication cost and processing cost,
-and that there is a skyline of the proposed algorithms; ie none dominates another … 
-"
-VLDB,Aida:_An_online_tool_for_accurate_disambiguation_of_named_entities_in_text_and_tables," Yosef, J Hoffart, I Bordino, M Spaniol…",2011,279,https://dl.acm.org/doi/abs/10.14778/3402755.3402793,1189463239532100134,"… graphs or linear programs for optimization. With the exception of [12], which offers a Web
-service at wdm.cs.waikato.ac.nz: 8080/service?task=wikify, none of the above methods
-is suit- able for online computation, with interactive response time … 
-"
-VLDB,Measuring_the_Complexity_of_Join_Enumeration_in_Query_Optimization.,"Ono, GM Lohman",1990,549,https://pdfs.semanticscholar.org/c50c/a444a4aa5b701670fdee589df6668c0c10d5.pdf,5144610119819043766,"… to do so [KOO80]. Rosenthal's optimizer [ROS82] also included plans with composite
-inncrs. IIowever, so far as is known, none of these optimizers permitted adjusting
-the search space used by the opti- mizer. 'I'he rule-based … 
-"
-VLDB,Hadoop++_making_a_yellow_elephant_run_like_a_cheetah_(without_it_even_noticing),"Dittrich, JA Quian",2010,6,https://dl.acm.org/doi/abs/10.14778/1920841.1920908,5745024622042486818,"Page 1. Hadoop++: Making a Yellow Elephant Run Like a Cheetah (Without It Even
-Noticing) Jens Dittrich Jorge-Arnulfo Quian´e-Ruiz Alekh Jindal , Yagiz Kargin Vinay
-Setty J¨org Schad Information Systems Group, Saarland … 
-"
-VLDB,Pre-Analysis_Locking:_A_Safe_and_Deadlock_Free_Locking_Policy.,"Lausen, E Soisalo",1985,202,http://www.vldb.org/conf/1985/P270.PDF,7481110105532469732,"… In general, none of pre-analysis lock- ing and two-phase locking dominates the other: there exist
-cases in which pre-analysis locking allows for more concur- rency than any two-phase locking
-policy, but there are also cases in which a two-phase locking policy allows for more … 
-"
-VLDB,Reasoning_and_identifying_relevant_matches_for_XML_keyword_search,"Liu, Y Cher",2008,7,https://dl.acm.org/doi/abs/10.14778/1453856.1453956,12460251333470174338,"… An algorithm that shows the ab- normal behaviors illustrated in the above examples violates at
-least one of the properties, as will be analyzed in Example 2.2 through 2.6.3 After reviewing the
-existing strategies on XML keyword search, we find that, surprisingly, none of them … 
-"
-VLDB,Intermittent_query_processing,"Tang, Z Shang, AJ Elmore, S Krishnan…",2019,33,https://dl.acm.org/citation.cfm?id=3360354,11280802285997205596,"… 12, No. 11 ISSN 2150-8097. DOI: https://doi.org/10.14778/3342263.3342278 and resource
-consumption, none of these solutions exploits knowl- edge about data arrival patterns, which
-limits opportunities for new planning and execution strategies … 
-"
-VLDB,Flexps:_Flexible_parallelism_control_in_parameter_server_architecture,"Huang, T Jin, Y Wu, Z Cai, X Yan, F Yang…",2018,108,https://dl.acm.org/doi/abs/10.1145/3177732.3177734,12986508151434947031,"… and widely used in practice. However, none of these systems supports changing
-parallelism during runtime, which is crucial for the efficient execution of machine
-learning tasks with dynamic workloads. We propose a new system … 
-"
-VLDB,The_researcher's_guide_to_the_data_deluge:_Querying_a_scientific_database_in_just_a_few_seconds," Kersten, S Idreos, S Manegold…",2011,85,https://dl.acm.org/doi/abs/10.14778/3402755.3402799,3768918548524926395,"… Proceedings of the VLDB Endowment, Vol. 4, No. 12 Copyright 2011 VLDB Endowment
-2150-8097/11/08... $ 10.00. priori knowledge to prepare the system for fast response.
-In sci- entific databases though, none of this is true anymore … 
-"
-VLDB,Modelling_Information_Preserving_Databases:_Consequences_of_the_Concept_of_Time.," Klopprogge, PC Lockemann",1983,177,https://www.researchgate.net/profile/Peter_Lockemann/publication/221309689_Modelling_Information_Preserving_Databases_Consequences_of_the_Concept_of_Time/links/544b6ad70cf2bcc9b1d51eda.pdf,13621568991479868701,"… future. In an information preservlng database these distinctions are the very essence of its function.
-In parti- cular, if an item had an existence in the past but none at present, this fact vi 11 be
-preserved in its history. Non- existence vi11 be expressed vithin this … 
-"
-VLDB,A_practical_scalable_distributed_b-tree," Aguilera, W Golab, MA Shah",2008,1,https://dl.acm.org/doi/abs/10.14778/1453856.1453922,18381304724072157594,"… Operation Description Lookup(k) return v st (k, v)∈B, or error if none Update(k, v) if (k, ∗)∈B
-then replace it with (k, v) else error Insert(k, v) add (k, v) to B if no (k, ∗) ∈ B, else Update(k, v)
-Delete(k) delete (k, v) from B for v st (k, v)∈B, or error if none GetNext(k) return smallest k … 
-"
-VLDB,Efficient_algorithms_for_crowd-aided_categorization,"Li, X Wu, Y Jin, J Li, G Li",2020,49,https://dl.acm.org/doi/abs/10.14778/3389133.3389139,7083355023206709686,"… this product, or just click the “None of the above” option indicating that it does not belong to this
-category or any of its subcategories … Finally, if the photo is about Mount Fuji as shown at the left
-half of Figure 2, which is in Japan, the correct option would be (d) “None of the above” … 
-"
-VLDB,Distributed_trajectory_similarity_search,"Xie, F Li, JM Phillips",2017,186,https://dl.acm.org/doi/abs/10.14778/3137628.3137655,17122960695241750800,"… Real Se- quence (EDR) [13], etc. More importantly, to the best of our knowl- edge,
-none of the prior studies have investigated how to perform trajectory similarity search
-in a distributed and parallel setting. In light of that, we propose … 
-"
-VLDB,A_generic_approach_to_bulk_loading_multidimensional_index_structures,"Van den Bercken, B Seeger, P Widmayer",1997,3,http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.72.6299&rep=rep1&type=pdf,17501324484611642254,"… main memory can hold. The I/O cost of the algorithms is expressed in terms of N,
-M and B, ie, none of these three parameters is viewed as a constant. We will
-abbreviate N/B and M/B by n and m, respectively. Assuming this I … 
-"
-VLDB,Line_Graph_of_Gamma-Acyclic_Database_Schems_and_its_Recognition_Algorithm.,Zhu,1984,7,http://www.vldb.org/conf/1984/P218.PDF,8958748374926994014,"… Figure 3 By assumption, we know that W,#!V!~, W,#W, and W,#W,. Now we show that none of
-the followings is true. w, =w,u wj w1 =wt u w9 w, =w,u wr i ;*:{ ,3:3) … From beA(\C or hew,, we claim
-W,s;Ws, thus W,=Wj. The contradic- tion shows that none of those equations holds … 
-"
-VLDB,Managing_text_as_data,Pavlovi,1986,78,https://www.researchgate.net/profile/Gordana_Pavlovic-Lazetic/publication/221310948_Managing_Text_as_Data/links/548f3ff40cf214269f2638f8.pdf,7185307146691724755,"… To manage text as data, the first step is to handle words satisfactorily. Words are
-after all natural atoms of text. Whereas representing texts as strings of characters
-capture none of their meaning. representing them as sequences … 
-"
-VLDB,Voodoo-a_vector_algebra_for_portable_database_performance_on_modern_hardware,"Pirk, O Moll, M Zaharia, S Madden",2016,292,https://dl.acm.org/doi/abs/10.14778/3007328.3007336,2128734625258129886,"… As a result of this, none of the aforementioned engines implement hardware-specific or
-data-driven optimizations such as the one shown in Figure 1. To address this complexity, we
-developed a new interme- diate algebra, called Voodoo as the compilation target for query plans … 
-"
-VLDB,Histogram-based_approximation_of_set-valued_query-answers," Ioannidis, V Poosala",1999,8,http://www.vldb.org/conf/1999/P15.pdf,10818520946737416793,"… However, none of these approaches capture proxim- ity between the sets in the way we believe
-is required for approximate query answering. One of the key lim- itations of the first two metrics
-is that they do not take into account the actual values of the set elements … 
-"
-VLDB,Data_sharing_analysis_for_a_database_programming_language_via_abstract_interpretation,"Amato, F Giannotti, G Mainetto",1993,159,http://www.academia.edu/download/50039093/Data_Sharing_Analysis_for_a_Database_Pro20161101-6705-1n2wxvx.pdf,11414741311204222378,"… Values of basic types are irrelevant and are eval- uated to the special value none. Modifiable
-val- ues, References, Classes and Objects, are accessed … The evaluation of this primitive returns
-none since the standard evaluation returns the basic constant nil … 
-"
+VLDB,Similarity_search_in_high_dimensions_via_hashing,"A Gionis, P Indyk, R Motwani",1999,3899,http://www.dblab.ntua.gr/~gtsat/collection/lsh/LSH-VLDB-gionis99.pdf,8819805256031800277,"The nearest-or near-neighbor query problems arise in a large variety of database applications, usually in the context of similarity searching. Of late, there has been increasing interest in building search/index structures for performing similarity search over high …"
+VLDB,A_quantitative_analysis_and_performance_study_for_similarity-search_methods_in_high-dimensional_spaces,"R Weber, HJ Schek, S Blott",1998,2251,http://vldb.org/conf/1998/p194.pdf,5623307406251539980,"For similarity search in high-dimensional vector spaces (or 'HDVSs'), researchers have proposed a number of new methods (or adaptations of existing methods) based, in the main, on data-space partitioning. However, the performance of these methods generally degrades …"
+VLDB,Generic_schema_matching_with_cupid,"J Madhavan, PA Bernstein, E Rahm",2001,2030,https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/tr-2001-58.pdf,12400328878822275772,"Schema matching is a critical step in many applications, such as XML message mapping, data warehouse loading, and schema integration. In this paper, we investigate algorithms for generic schema matching, outside of any particular data model or application. We first …"
+VLDB,STING:_A_statistical_information_grid_approach_to_spatial_data_mining,"W Wang, J Yang, R Muntz",1997,1956,http://suraj.lums.edu.pk/~cs536a04/handouts/STING.pdf,18399849071317195831,"Spatial data mining, ie, discovery of interesting characteristics and patterns that may implicitly exist in spatial databases, is a challenging task due to the huge amounts of spatial data and to the new conceptual nature of the problems which must account for spatial …"
+VLDB,Sampling_large_databases_for_association_rules,H Toivonen,1996,1897,https://www.cin.ufpe.br/~jtalr/Mestrado/toiSample.pdf,1947417731565120283,"Discovery of association rules. is an important database mining problem. Current algorithms for finding association rules require several passes over the analyzed database, and obviously the role of I/O overhead is very significant for very large databases. We present …"
+VLDB,Discovery_of_multiple-level_association_rules_from_large_databases,"J Han, Y Fu",1995,1649,http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.39.8968&rep=rep1&type=pdf,10170241709649310064,"Previous studies on mining association rules nd rules at single concept level, however, mining association rules at multiple concept levels may lead to the discovery of more speci c and concrete knowledge from data. In this study, a top-down progressive deepening method …"
+VLDB,Roadrunner:_Towards_automatic_data_extraction_from_large_web_sites,"V Crescenzi, G Mecca, P Merialdo",2001,1482,http://www.vldb.org/conf/2001/P109.pdf,2238350008592659688,"The paper investigates techniques for extracting data from HTML sites through the use of automatically generated wrappers. To automate the wrapper generation and the data extraction process, the paper develops a novel technique to compare HTML pages and …"
+VLDB,SPRINT:_A_scalable_parallel_classifier_for_data_mining,"J Shafer, R Agrawal, M Mehta",1996,1392,http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.40.2497&rep=rep1&type=pdf,6746036302712498834,"Classi cation is an important data mining problem. Although classi cation is a wellstudied problem, most of the current classication algorithms require that all or a portion of the the entire dataset remain permanently in memory. This limits their suitability for mining over …"
+VLDB,Indexing_and_querying_XML_data_for_regular_path_expressions,"Q Li, B Moon",2001,1361,http://www.vldb.org/conf/2001/P361.pdf,18069358375787009501,"With the advent of XML as a standard for data representation and exchange on the Internet, storing and querying XML data becomes more and more important. Several XML query languages have been proposed, and the common feature of the languages is the use of …"
+VLDB,The_transaction_concept:_Virtues_and_limitations,J Gray,1981,1341,https://www.hpl.hp.com/techreports/tandem/TR-81.3.pdf,15553426371650547409,"A traDsac: tion is a transformation of state which has the properties of atomicity (all or nothing), durability (effeets survive failures) and consistency (a correet transformation). The transaction concept is key to the structuring of data management applications. The concept …"
+VLDB,Wavecluster:_A_multi-resolution_clustering_approach_for_very_large_spatial_databases,"G Sheikholeslami, S Chatterjee, A Zhang",1998,1182,http://webdocs.cs.ualberta.ca/~zaiane/courses/cmput695-00/papers/vldb98.pdf,7551061922644605284,"Many applications require the management of spatial data. Clustering large spatial databases is an important problem which tries to find the densely populated regions in the feature space to be used in data mining, knowledge discovery, or efficient information …"
+VLDB,Efficient_progressive_skyline_computation,"KL Tan, PK Eng, BC Ooi",2001,966,http://www.vldb.org/conf/2001/P301.pdf,15076212385425117578,"In this paper, we focus on the retrieval of a set of interesting answers called the skyline from a database. Given a set of points, the skyline comprises the points that are not dominated by other points. A point dominates another point if it is as good or better in all dimensions and …"
+VLDB,Novel_approaches_to_the_indexing_of_moving_object_trajectories.,"D Pfoser, CS Jensen, Y Theodoridis",2000,946,https://www.researchgate.net/profile/Yannis_Theodoridis/publication/2395927_Novel_Approaches_to_the_Indexing_of_Moving_Object_Trajectories/links/0c960516f90ac7862e000000.pdf,3161753311470712869,"The domain of spatiotemporal applications is a treasure trove of new types of data and queries. However, work in this area is guided by related research from the spatial and temporal domains, so far, with little attention towards the true nature of spatiotemporal …"
+VLDB,Focused_Crawling_Using_Context_Graphs.,"M Diligenti, F Coetzee, S Lawrence, CL Giles, M Gori",2000,931,http://www.vldb.org/conf/2000/P527.pdf,11679367004010026485,"Maintaining currency of search engine indices by exhaustive crawling is rapidly becoming impossible due to the increasing size and dynamic content of the web. Focused crawlers aim to search only the subset of the web related to a specific category, and offer a potential …"
+VLDB,On_the_computation_of_multidimensional_aggregates,"S Agarwal, R Agrawal, PM Deshpande, A Gupta…",1996,913,ftp://ftp.cs.wisc.edu/pub/techreports/1997/TR1314.pdf,8624620981335983298,At the heart of OLAP or multidimensional data analysis applications is the ability to simultaneously aggregate across many sets of dimensions. Computing multidimensional aggregates is a performance bottleneck for these applications. We explore various schemes …
+VLDB,Detecting_change_in_data_streams,"D Kifer, S Ben-David, J Gehrke",2004,897,https://books.google.co.jp/books?hl=ja&lr=lang_ja|lang_en&id=R780l9ETyw8C&oi=fnd&pg=PA180&dq=source:VLDB&ots=XJC2O0ESZl&sig=dvfu6EWtiv6OY2IDDxmU3DHveQY,16274034098843644426,"Detecting changes in a data stream is an important area of research with many applications. In this paper, we present a novel method for the detection and estimation of change. In addition to providing statistical guarantees on the reliability of detected changes, our method …"
+VLDB,Semantic_data_caching_and_replacement,"S Dar, MJ Franklin, BT Jonsson, D Srivastava, M Tan",1996,790,https://www2.cs.duke.edu/courses/cps296.1/spring02/papers/DFJST-VLDB1996.pdf,255857260659170402,"We propose a semantic model for client-side caching and replacement in a client-server database system and compare this approach to page caching and tuple caching strategies. Our caching model is based on, and derives its advantages from, three key ideas. First, the …"
+VLDB,On_k-anonymity_and_the_curse_of_dimensionality,CC Aggarwal,2005,792,http://www.charuaggarwal.net/privh.pdf,1911198696550168568,"In recent years, the wide availability of personal data has made the problem of privacy preserving data mining an important one. A number of methods have recently been proposed for privacy preserving data mining of multidimensional data records. One of the …"
+VLDB,"Composite_events_for_active_databases:_Semantics,_contexts_and_detection","S Chakravarthy, V Krishnaprasad, E Anwar, SK Kim",1994,764,http://www.vldb.org/conf/1994/P606.PDF,54026715598358569,"Making a database system active entails developing an expressive event specification language with well-defined semantics, algorithms for the detection of composite events, and an architecture for an event detector along with its implementation. Thii paper presents the …"
+VLDB,Automated_selection_of_materialized_views_and_indexes_in_SQL_databases,"S Agrawal, S Chaudhuri, VR Narasayya",2000,754,http://www.cse.iitb.ac.in/infolab/Data/Courses/CS632/2017/2013/Papers/index-view-sel-vldb2000.pdf,1230153639822613926,Automatically selecting an appropriate set of materialized views and indexes for SQL databases is a non-trivial task. A judicious choice must be cost-driven and influenced by the workload experienced by the system. Although there has been work in materialized view …
+VLDB,Approximate_string_joins_in_a_database_(almost)_for_free,"L Gravano, PG Ipeirotis, HV Jagadish, N Koudas…",2001,741,http://www.vldb.org/conf/2001/P491.pdf,4143253108621800460,"String data is ubiquitous, and its management has taken on particular importance in the past few years. Approximate queries are very important on string data especially for more complex queries involving joins. This is due, for example, to the prevalence of typographical …"
+VLDB,SPIRIT:_Sequential_pattern_mining_with_regular_expression_constraints,"MN Garofalakis, R Rastogi, K Shim",1999,713,http://www.vldb.org/conf/1999/P22.pdf,6639916719465555665,"Discovering sequential patterns is an important problem in data mining with a host of application domains including medicine, telecommunications, and the World Wide Web. Conventional mining systems provide users with only a very restricted mechanism (based …"
+VLDB,Potter's_wheel:_An_interactive_data_cleaning_system,"V Raman, JM Hellerstein",2001,722,http://www.vldb.org/conf/2001/P381.pdf,10349558671112969999,"Cleaning data of errors in structure and content is important for data warehousing and integration. Current solutions for data cleaning involve many iterations of data “auditing” to find errors, and long-running transformations to fix them. Users need to endure long waits …"
+VLDB,Objectrank:_Authority-based_keyword_search_in_databases,"A Balmin, V Hristidis, Y Papakonstantinou",2004,691,https://www.cs.ucr.edu/~vagelis/publications/ObjectRankExtended.pdf,12607792507088209667,"The ObjectRank system applies authority-based ranking to keyword search in databases modeled as labeled graphs. Conceptually, authority originates at the nodes (objects) containing the keywords and flows to objects according to their semantic connections. Each …"
+VLDB,Linear_Hashing:_a_new_tool_for_file_and_table_addressing.,W Litwin,1980,675,http://users.ece.northwestern.edu/~peters/references/Linearhash80.pdf,12075333076740679543,"Linear hashing is a hashing in which the address space may grow or shrink dynamically. A file or a table may then support ally number of insertions or deletions without access or memory load performance deterioration. A record in the file is, in general, found in pale …"
+VLDB,Finding_intensional_knowledge_of_distance-based_outliers,"EM Knorr, RT Ng",1999,662,http://www.academia.edu/download/45215609/Finding_Intensional_Knowledge_of_Distanc20160429-4547-dz5g0r.pdf,16198633439049355368,"Existing studies on outliers focus only on the identi cation aspect; none provides any intensional knowledge of the outliers| by which we mean a description or an explanation of why an identi ed outlier is exceptional. For many applications, a description or explanation is …"
+VLDB,Knowledge_discovery_in_databases:_An_attribute-oriented_approach,"J Han, Y Cai, N Cercone",1992,652,http://hanj.cs.illinois.edu/pdf/vldb92.pdf,16277172792739199218,"Abstract Knowledge discovery in databases, or data mining, is an important issue in the development of data-and knowledge-base systems. An attribute-oriented induction method has been developed for knowledge discovery in databases. The method integrates a …"
+VLDB,Schema_mapping_as_query_discovery,"RJ Miller, LM Haas, MA Hernández",2000,615,https://www.academia.edu/download/49844185/miller00schema.pdf,4196861274122979988,"To enable modern data intensive applications including data warehousing, global information systems and electronic commerce, we must solve the schema mapping problem in which a source (legacy) database is mapped into a different, but fixed, target schema …"
+VLDB,Selectivity_estimation_without_the_attribute_value_independence_assumption,"V Poosala, YE Ioannidis",1997,622,https://www.madgik.di.uoa.gr/sites/default/files/2018-06/vldb97_pp486-495.pdf,11913203670532209411,"The result size of a query that involves multiple attributes from the same relation depends on these attributes' joinr data distribution, ie, the frequencies of all combinations of attribute values. To simplify the estimation of that size, most commercial systems make the artribute …"
+VLDB,Disk_Shadowing.,"D Bitton, J Gray",1988,627,https://books.google.co.jp/books?hl=ja&lr=lang_ja|lang_en&id=RtrSEU9HEX8C&oi=fnd&pg=PA331&dq=source:VLDB&ots=t-K9UAyV8b&sig=3jU6lMDmlrqTvuQV1LnH-hEREU0,14159545694908363979,"Disk shadowing is a technique for maintaining a set of two or more identical disk images on separate disk devices. Its primary purpose is to enhance reliability and availability of secondary storage by providing multiple paths to redundant data. However, shadowing can …"
+VLDB,Using_schema_matching_to_simplify_heterogeneous_data_translation,"T Milo, S Zohar",1998,609,http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.30.2620&rep=rep1&type=pdf,11472512577855864179,"A broad spectrum of data is available on the Web in distinct heterogeneous sources, and stored under di erent formats. As the number of systems that utilize this heterogeneous data grows, the importance of data translation and conversion mechanisms increases greatly. In …"
+VLDB,A_fast_index_for_semistructured_data,"BF Cooper, N Sample, MJ Franklin, GR Hjaltason…",2001,625,http://www.vldb.org/conf/2001/P341.pdf,9263905110603930954,"Queries navigate semistructured data via path expressions, and can be accelerated using an index. Our solution encodes paths as strings, and inserts those strings into a special index that is highly optimized for long and complex keys. We describe the Index Fabric, an …"
+VLDB,Adaptive_cleaning_for_RFID_data_streams,"SR Jeffery, M Garofalakis, MJ Franklin",2006,585,http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.324.1235&rep=rep1&type=pdf,4007797585320632150,"ABSTRACT A major impediment to the widespread adoption of RFID technology is the unreliability of the data streams produced by RFID readers; a 30% drop rate is not uncommon for RFID deployments. To compensate, most RFID middleware systems provide …"
+VLDB,"Don't_Scrap_It,_Wrap_It!_A_Wrapper_Architecture_for_Legacy_Data_Sources.","MT Roth, PM Schwarz",1997,613,https://apps.dtic.mil/dtic/tr/fulltext/u2/a383046.pdf#page=79,14661803332761417492,"Garlic is a middleware system that provides an integrated view of a variety of legacy data sources, without changing how or where data is stored. In this paper, we describe our architecture for wrappers, key components of Garlic that encapsulate data sources and …"
+VLDB,Algorithms_for_acyclic_database_schemes,M Yannakakis,1981,566,https://www.researchgate.net/profile/Mihalis_Yannakakis/publication/200034379_Algorithms_for_Acyclic_Database_Schemes/links/5745c2a708ae9f741b430b62/Algorithms-for-Acyclic-Database-Schemes.pdf,11707657302403374552,AfSSTRACT: Many real-world situations can be captured by a set of functional dependencies and a single join dependency of a particular form called acyclic [B..]. The join dependency corresponds to a natural decomposition into meaningful1 objects (an acyclic …
+VLDB,Surfing_wavelets_on_streams:_One-pass_summaries_for_approximate_aggregate_queries,"AC Gilbert, Y Kotidis, S Muthukrishnan, M Strauss",2001,564,http://www.vldb.org/conf/2001/P079.pdf,14578234391772784920,We present techniques for computing small space representations of massive data streams. These are inspired by traditional wavelet-based approximations that consist of specific linear projections of the underlying data. We present general “sketch” based methods for capturing …
+VLDB,Optimal_histograms_with_quality_guarantees,"HV Jagadish, N Koudas, S Muthukrishnan, V Poosala…",1998,555,http://engineering.nyu.edu/~suel/papers/vopt.pdf,1712319662956318931,"Histograms are commonly used to capture attribute value distribution statistics for query optimizers. More recently, histograms have also been considered as a way to produce quick approximate answers to decision support queries. This widespread interest in histograms …"
+VLDB,Materialized_Views_Selection_in_a_Multidimensional_Database.,"E Baralis, S Paraboschi, E Teniente",1997,547,https://www.researchgate.net/profile/Ernest_Teniente/publication/2600059_Materialized_View_Selection_in_a_Multidimensional_Database/links/0fcfd50aa0b5c7ad97000000.pdf,1518795054128430790,A multidimensional database is a data repository that supports the efficient execution of complex business decision queries. Query response can be significantly improved by storing an appropriate set of materialized views. These views are selected from the …
+VLDB,Answering_XML_Queries_on_Heterogeneous_Data_Sources.,"I Manolescu, D Florescu, D Kossmann",2001,529,http://www.vldb.org/conf/2001/P241.pdf,6872787089534604727,"9 C ' ""!$#&%(' ( 132547 6 8@9A ABDCF EG CIHP %( Q6$R9A#S)T 6 #UCV# WC 8S'YX` #SBa6 
+G cD d Wfe8&CICI8 %gXih $} 5 &# ( 4 %&# 9 p A Fe h& ! 4 g ' 4 m&# cr2 &# rq$ tr & ' cru & E 
+s D ! "" D h &# p Ie ts 1 k D Iet &# i I p0 c F $4 g y&# X D crr u vtwyx $ w U 4 T … D fr # 4 y D t t …"
+VLDB,Weaving_Relations_for_Cache_Performance.,"A Ailamaki, DJ DeWitt, MD Hill, M Skounakis",2001,503,http://www.vldb.org/conf/2001/P169.pdf,4752802751686493945,"Relational database systems have traditionally optimzed for I/O performance and organized records sequentially on disk pages using the N-ary Storage Model (NSM)(aka, slotted pages). Recent research, however, indicates that cache utilization and performance is …"
+VLDB,Database_architecture_optimized_for_the_new_bottleneck:_Memory_access,"PA Boncz, S Manegold, ML Kersten",1999,491,http://www.cs.cmu.edu/~natassa/courses/15-823/syllabus/papers/boncz99database.pdf,1779171342376060467,"In the past decade, advances in speed of commodity CPUs have far out-paced advances in memory latency. Main-memory access is therefore increasingly a performance bottleneck for many computer applications, including database systems. In this article, we use a simple …"
+VLDB,Composite_event_specification_in_active_databases:_Model_&_implementation,"NH Gehani, HV Jagadish, O Shmueli",1992,534,http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.108.2501&rep=rep1&type=pdf,6387381457190907737,"Active database systems require facilities to specify triggers that fire when specified events occur. We propose a language for specifying composite events as eveti expressions, formed using event operators and events (primitive or composite). An event expression maps an …"
+VLDB,"An_efficient,_cost-driven_index_selection_tool_for_Microsoft_SQL_server","S Chaudhuri, VR Narasayya",1997,499,http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.629.1804&rep=rep1&type=pdf,17964755600477780442,"In this paper we describe novel techniques that make it possible to build an industrial-strength tool for automating the choice of indexes in the physical design of a SQL database. The tool takes as input a workload of SQL queries, and suggests a set of suitable indexes …"
+VLDB,Maximal_vector_computation_in_large_data_sets,"P Godfrey, R Shipley, J Gryz",2005,482,http://www.eecs.yorku.ca/research/techreports/2004/CS-2004-06.pdf,12424779558192453190,"Finding the maximals in a collection of vectors is relevant to many applications. The maximal set is related to the convex hull—and hence, linear optimization—and nearest neighbors. The maximal vector problem has resurfaced with the advent of skyline queries for relational …"
+VLDB,Algorithms_for_materialized_view_design_in_data_warehousing_environment,"J Yang, K Karlapalem, Q Li",1997,487,https://www.researchgate.net/profile/Kamalakar_Karlapalem/publication/2598345_Algorithms_for_Materialized_View_Design_in_Data_Warehousing_Environment/links/00463515be6b973e41000000/Algorithms-for-Materialized-View-Design-in-Data-Warehousing-Environment.pdf,9047502979874951403,"Data warehouses may contain multiple views accessed by queries. When these views are related to each other and de ned over overlapping portions of the base data, it may be more e cient not to materialize all the views, but rather to materialize certain\shared"" portions of …"
+VLDB,A_foundation_for_multi-dimensional_databases,"M Gyssens, LVS Lakshmanan",1997,469,https://www.researchgate.net/profile/Marc_Gyssens/publication/2314443_A_Foundation_for_Multi-Dimensional_Databases/links/02bfe50ed7a3726193000000/A-Foundation-for-Multi-Dimensional-Databases.pdf,10892449734188189405,"We present a multi-dimensional database model, which we believe can serve as a conceptual model for On-Line Analytical Processing (OLAP)-based applications. Apart from providing the functionalities necessary for OLAP-based applications, the main feature of the …"
+VLDB,LEO-DB2's_learning_optimizer,"M Stillger, GM Lohman, V Markl, M Kandil",2001,437,http://www.vldb.org/conf/2001/P019.pdf,1098753575267767331,Most modern DBMS optimizers rely upon a cost model to choose the best query execution plan (QEP) for any given query. Cost estimates are heavily dependent upon the optimizer's estimates for the number of rows that will result at each step of the QEP for complex queries …
+VLDB,Indexing_the_distance:_An_efficient_method_to_knn_processing,"C Yu, BC Ooi, KL Tan, HV Jagadish",2001,414,http://www.vldb.org/conf/2001/P421.pdf,6802497760838263642,"In this paper, we present an efficient method, called iDistance, for K-nearest neighbor (KNN) search in a high-dimensional space. iDistance partitions the data and selects a reference point for each partition. The data in each cluster are transformed into a single dimensional …"
+VLDB,A_new_SQL-like_operator_for_mining_association_rules,"R Meo, G Psaila, S Ceri",1996,452,https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.48.5095&rep=rep1&type=pdf,159745057928089897,"Data mining evolved as a collection of applicative problems and e cient solution algorithms relative to rather peculiar problems, all focused on the discovery of relevant information hidden in databases of huge dimensions. In particular, one of the most investigated topics is …"
+VLDB,Improving_Data_Quality:_Consistency_and_Accuracy.,"G Cong, W Fan, F Geerts, X Jia, S Ma",2007,407,https://www.research.ed.ac.uk/portal/files/17886909/Cong_Fan_ET_AL_2007_Improving_Data_Quality_Consistency_and_Accuracy.pdf,10211669575881145299,"Two central criteria for data quality are consistency and accuracy. Inconsistencies and errors in a database often emerge as violations of integrity constraints. Given a dirty database D, one needs automated methods to make it consistent, ie, find a repair D′ that satisfies the …"
+VLDB,Materialized_view_selection_for_multidimensional_datasets,"A Shukla, P Deshpande, JF Naughton",1998,403,http://www.vldb.org/conf/1998/p488.pdf,17997236781353917039,"To fulfill the requirement of fast interactive multidimensional data analysis, database systems precompute aggregate views on some subsets of dimensions and their corresponding hierarchies. However, the problem of what to precompute is difficult and intriguing. The …"
+VLDB,The_theory_of_probabilistic_databases.,"R Cavallo, M Pittarelli",1987,392,http://vldb.org/conf/1987/P071.PDF,18428998826912104463,"ABS! l'RACT A theory of probabilistic databases is outlined. This theory is one component of an integrated approach to data-modelling that accomodates both probabilistic and relational data. In fact, many of the results presented here were developed in the context of a …"
+VLDB,"Don't_be_lazy,_be_consistent:_Postgres-R,_a_new_way_to_implement_database_replication","B Kemme, G Alonso",2000,404,http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.37.5&rep=rep1&type=pdf,16023399584297435589,"Database designers often point out that eager, update everywhere replication su ers from high deadlock rates, message overhead and poor response times. In this paper, we show that these limitations can be circumvented by using a combination of known and novel …"
+VLDB,Extracting_large-scale_knowledge_bases_from_the_web,"R Kumar, P Raghavan, S Rajagopalan, A Tomkins",1999,397,http://vldb.org/conf/1999/P60.pdf,6903868523096370256,"The subject of this paper is the creation of knowledge bases by enumerating and organizing all web occurrences of certain subgraphs. We focus on subgraphs that are signatures of web phenomena such as tightly-focused topic communities, webrings, taxonomy trees, keiretsus …"
+VLDB,Evaluating_top-k_selection_queries,"S Chaudhuri, L Gravano",1999,393,http://www-db.deis.unibo.it/courses/SI-LS/papers/CG99.pdf,5172987613491551932,"In many applications, users specify target values for certain attributes, without requiring exact matches to these values in return. Instead, the result to such queries is typically a rank of the “top k” tuples that best match the given attribute values. In this paper, we study the …"
+VLDB,Indexing_multi-dimensional_uncertain_data_with_arbitrary_probability_density_functions,"Y Tao, R Cheng, X Xiao, WK Ngai, B Kao, S Prabhakar",2005,369,http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.122.2301&rep=rep1&type=pdf,6329141319810652265,"In an “uncertain database”, an object o is associated with a multi-dimensional probability density function (pdf), which describes the likelihood that o appears at each position in the data space. A fundamental operation is the “probabilistic range search” which, given a value …"
+VLDB,Answering_queries_with_aggregation_using_views,"D Srivastava, S Dar, HV Jagadish, AY Levy",1996,416,https://homes.cs.washington.edu/~alon/files/vldb96-agg.pdf,10008666722428623783,"We present novel algorithms for the problem of using materialized views to compute answers to SQL queries with grouping and aggregation, in the presence of multiset tables. In addition to its obvious potential in query optimization, this problem is important in many …"
+VLDB,Sampling-based_estimation_of_the_number_of_distinct_values_of_an_attribute,"PJ Haas, JF Naughton, S Seshadri, L Stokes",1995,372,http://vldb.org/conf/1995/P311.PDF,13628882306051665362,"We provide several new sampling-based estimators of the number of distinct values of an attribute in a relation. We compare these new estimators to estimators from the database and statistical literature empirically, using a large number of attribute-value distributions …"
+VLDB,Automatic_composition_of_transition-based_semantic_web_services_with_messaging,"D Berardi, D Calvanese, G De Giacomo, R Hull…",0051,355,https://www.dis.uniroma1.it/~degiacom/papers/2005/BCDHM_VLDB2005.pdf,18206360052661275664,"In this paper we present Colombo, a framework in which web services are characterized in terms of (i) the atomic processes (ie, operations) they can perform;(ii) their impact on the “real world”(modeled as a relational database);(iii) their transition-based behavior; and (iv) …"
+VLDB,Including_group-by_in_query_optimization,"S Chaudhuri, K Shim",1994,361,http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.33.1669&rep=rep1&type=pdf,271103950934645112,"In existing relational database systems, processing of group-by and computation of aggregate functions are always postponed until all joins are performed. In this paper, we present transformations that make it possible to push group-by operation past one or more …"
+VLDB,Efficient_Computation_of_Reverse_Skyline_Queries.,"E Dellis, B Seeger",2007,344,http://dbs.mathematik.uni-marburg.de/Publications/myPapers/2007/DS07.pdf,7753324347996753306,"In this paper, for the first time, we introduce the concept of Reverse Skyline Queries. At first, we consider for a multidimensional data set P the problem of dynamic skyline queries according to a query point q. This kind of dynamic skyline corresponds to the skyline of a …"
+VLDB,Rainforest-a_framework_for_fast_decision_tree_construction_of_large_datasets,"J Gehrke, R Ramakrishnan, V Ganti",1998,360,http://www.dsi.unive.it/~dm/gehrke98rainforest.pdf,2645624839455201820,"Classification of large datasets is an important data mining problem. Many classification algorithms have been proposed in the literature, but studies have shown that so far no algorithm uniformly outperforms all other algorithms in terms of quality. In this paper, we …"
+VLDB,Preferences;_Putting_More_Knowledge_into_Queries.,"M Lacroix, P Lavency",1987,329,http://vldb.org/conf/1987/P217.PDF,3843437852310558647,"Permission to copy without fee all or part of this material is granted provided that the copies are not made or distributed for direct commercial advantage, the VLDB copyright notice and the title of the publication and its date appear, and notice is given that copying is by …"
+VLDB,Optimization_of_Nonrecursive_Queries.,"R Krishnamurthy, H Boral, C Zaniolo",1986,351,https://pdfs.semanticscholar.org/2a21/d8b106066c90c3a7c81e0a9b7a66c5c9a1a3.pdf,9361416547259119390,"State-of-the-art optimization approaches for relational database systems, eg, those used in systems such as OBE, SQL/DS, and commercial INGRES. when used for queries in non-traditional database applications, suffer from two problems. First, the time complexity of their …"
+VLDB,Online_balancing_of_range-partitioned_data_with_applications_to_peer-to-peer_systems,"P Ganesan, M Bawa, H Garcia-Molina",2004,345,https://books.google.co.jp/books?hl=ja&lr=lang_ja|lang_en&id=R780l9ETyw8C&oi=fnd&pg=PA444&dq=source:VLDB&ots=XJC2O0ES1i&sig=Tr4mDc_Ja6_PkRDczkO4EMgi6Mo,13768212667454712855,"We consider the problem of horizontally partitioning a dynamic relation across a large number of disks/nodes by the use of range partitioning. Such partitioning is often desirable in large-scale parallel databases, as well as in peer-to-peer (P2P) systems. As tuples are …"
+VLDB,Fast_computation_of_sparse_datacubes,"KA Ross, D Srivastava",1997,360,http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.49.7859&rep=rep1&type=pdf,7932220144124280450,"Datacube queries compute aggregates over database relations at a variety of granularities, and they constitute an important class of decision support queries. Real-world data is frequently sparse, and hence e ciently computing datacubes over large sparse relations is …"
+VLDB,W3qs:_A_query_system_for_the_world-wide_web,"D Konopnicki, O Shmueli",1995,492,http://www.vldb.org/conf/1995/P054.PDF,11906190939880071114,"Abstract The World-Wide Web (WWW) is an ever growing, distributed, non-administered, global information resource. It resides on the worldwide computer network and allows access to heterogeneous information: text, image, video, sound and graphic data. Currently …"
+VLDB,Data_warehouse_configuration,"D Theodoratos, T Sellis",1997,331,http://www.dblab.ntua.gr/~dwq/vldb_dwq.pdf,3344970903904929933,"In the data warehousing approach to the integration of data from multiple information sources, selected information is extracted in advance and stored in a repository. A data warehouse (DW) can therefore be seen as a set of materialized views de ned over the …"
+VLDB,Storage_and_querying_of_e-commerce_data,"R Agrawal, A Somani, Y Xu",2001,299,http://www.vldb.org/conf/2001/P149.pdf,8457995997384129446,New generation of e-commerce applications require data schemas that are constantly evolving and sparsely populated. The conventional horizontal row representation fails to meet these requirements. We represent objects in a vertical format storing an object as a set …
+VLDB,Scalable_sweeping-based_spatial_join,"L Arge, O Procopiuc, S Ramaswamy, T Suel, JS Vitter",1998,294,http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.172.7310&rep=rep1&type=pdf,3013648788461956393,"In this paper, we consider the filter step of the spatial join problem, for the case where neither of the inputs are indexed. We present a new algorithm, Scalable Sweeping-Based Spatial Join (SSSJ), that achieves both efficiency on real-life data and robustness against …"
+VLDB,The_A-tree:_An_index_structure_for_high-dimensional_spaces_using_relative_approximation,"Y Sakurai, M Yoshikawa, S Uemura, H Kojima",2000,317,http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.110.4107&rep=rep1&type=pdf,3704911035633412242,"We propose a novel index structure, A-tree (Approximation tree), for similarity search of high-dimensional data. The basic idea of the A-tree is the introduction of Virtual Bounding Rectangles (VBRs), which contain and approximate MBRs and data objects. VBRs can be …"
+VLDB,Distinct_sampling_for_highly-accurate_answers_to_distinct_values_queries_and_event_reports,PB Gibbons,2001,283,http://www.vldb.org/conf/2001/P541.pdf,18208159645671603334,"Estimating the number of distinct values is a wellstudied problem, due to its frequent occurrence in queries and its importance in selecting good query plans. Previous work has shown powerful negative results on the quality of distinct-values estimates based on …"
+VLDB,Comparing_hierarchical_data_in_external_memory,SS Chawathe,1999,280,http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.31.4695&rep=rep1&type=pdf,13335423855313168728,"We present an external-memory algorithm for computing a minimum-cost edit script between two rooted, ordered, labeled trees. The I/O, RAM, and CPU costs of our algorithm are, respectively, 4mn+7m+5n, 6S, andO (MN+(M+N) S1: 5), where M and N are the input tree …"
+VLDB,Histogram-based_approximation_of_set-valued_query-answers,"YE Ioannidis, V Poosala",1999,292,http://www.vldb.org/conf/1999/P15.pdf,10818520946737416793,"Answering queries approximately has recently been proposed as a way to reduce query response times in on-line decision support systems, when the precise answer is not necessary or early feedback is helpful. Most of the work in this area uses sampling-based …"
+VLDB,"Business_Process_Coordination:_State_of_the_Art,_Trends,_and_Open_Issues.","U Dayal, M Hsu, R Ladin",2001,306,http://www.vldb.org/conf/2001/P003.pdf,998061164772699297,"Over the past decade, there has been a lot of work in developing middleware for integrating and automating enterprise business processes. Today, with the growth in e-commerce and the blurring of enterprise boundaries, there is renewed interest in business process …"
+VLDB,Ode_as_an_Active_Database:_Constraints_and_Triggers.,"NH Gehani, HV Jagadish",1991,448,http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.34.661&rep=rep1&type=pdf,13883821531353137752,"Ode [2, 3] is a database system and environment based on the object paradigm. The database is defined, queried, and manipulated using the database programming language O++, which is an upward-compatible extension of the object-oriented programming …"
+VLDB,VGRAM:_Improving_Performance_of_Approximate_Queries_on_String_Collections_Using_Variable-Length_Grams.,"C Li, B Wang, X Yang",2007,250,http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.120.1926&rep=rep1&type=pdf,14249077435787570778,"Many applications need to solve the following problem of approximate string matching: from a collection of strings, how to find those similar to a given string, or the strings in another (possibly the same) collection of strings? Many algorithms are developed using fixed-length …"
+VLDB,A_Taxonomy_and_Performance_Model_of_Data_Skew_Effects_in_Parallel_Joins.,"CB Walton, AG Dale, RM Jenevein",1991,278,http://vldb.org/conf/1991/P537.PDF,14636682183475258203,"Recent work on parallel joins and data skew has concentrated on algorithm design without considering the causes and chara. cteristics of data. skew itself. Existming ana. lyt, ic models of skew do not cont. ain enough informat, ion to fully describe data skew in parallel …"
+VLDB,GraphDB:_Modeling_and_querying_graphs_in_databases,RH Güting,1994,258,http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.52.3865&rep=rep1&type=pdf,13399994808804526895,"We propose a data model and query language that integrates an explicit modeling and querying of graphs smoothly into a standard database environment. For standard applications, some key features of object-oriented modeling are offered such as object …"
+VLDB,Querying_XML_views_of_relational_data,"J Shanmugasundaram, J Kiernan, EJ Shekita, C Fan…",2001,373,http://www.vldb.org/conf/2001/P261.pdf,2935918237935383613,"XML has emerged as the standard data exchange format for Internet-based business applications. This has created the need to publish existing business data, stored in relational databases, as XML. A general way to publish relational data as XML is to provide XML views …"
+VLDB,Change-centric_management_of_versions_in_an_XML_warehouse,"A Marian, S Abiteboul, G Cobena, L Mignet",2001,327,http://www.vldb.org/conf/2001/P581.pdf,6879107729890268842,"We present a change-centric method to manage versions in a Web WareHouse of XML data. The starting points is a sequence of snapshots of XML documents we obtain from the web. By running a di algorithm, we compute the changes between two consecutive versions. We …"
+VLDB,Rethinking_Database_System_Architecture:_Towards_a_Self-Tuning_RISC-Style_Database_System.,"S Chaudhuri, G Weikum",2000,266,https://www.mpi-inf.mpg.de/~weikum/vldb00.pdf,6783087558569022422,"Database technology is one of the cornerstones for the new millennium's IT landscape. However, database systems as a unit of code packaging and deployment are at a crossroad: commercial systems have been adding features for a long time and have now reached …"
+VLDB,Measuring_the_Complexity_of_Join_Enumeration_in_Query_Optimization.,"K Ono, GM Lohman",1990,279,https://pdfs.semanticscholar.org/c50c/a444a4aa5b701670fdee589df6668c0c10d5.pdf,5144610119819043766,"Introduction 314 (the second operand of the join) is the result of a join that must be materialized in memory or-if it is too big-on disk. The heuristic saves this materialization, but may exclude better plans for certain qucrics. As an example, suppose a query with four large …"
+VLDB,A_scalable_algorithm_for_answering_queries_using_views,"R Pottinger, AY Levy",2000,317,http://www.vldb.org/conf/2000/P484.pdf,9545398175090927348,"The problem of answering queries using views is to find efficient methods of answering a query using a set of previously materialized views over the database, rather than accessing the database relations. The problem has received significant attention because of its …"
+VLDB,Resource_sharing_in_continuous_sliding-window_aggregates,"A Arasu, J Widom",2004,248,https://books.google.co.jp/books?hl=ja&lr=lang_ja|lang_en&id=R780l9ETyw8C&oi=fnd&pg=PA336&dq=source:VLDB&ots=XJC2O0ES2l&sig=CR8pO8HQ7u4gdzM-scY9jBclhLM,13832404233570618312,"We consider the problem of resource sharing when processing large numbers of continuous queries. We specifically address sliding-window aggregates over data streams, an important class of continuous operators for which sharing has not been addressed. We present a suite …"
+VLDB,A_Consideration_on_Normal_Form_of_Not-Necessarily-Normalized_Relation_in_the_Relational_Data_Model.,A Makinouchi,1977,353,http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.86.3877&rep=rep1&type=pdf,3952093412755888221,"In this paper definitions of unnormalized relation, functional dependency on it and Normal Form are presented. The Normal Form plays a key role in our relational data model in which unnormalized relations are admitted as does the Third Normal Form of Codd in the data …"
+VLDB,Database_Updates_through_Abduction.,"AC Kakas, P Mancarella",1990,304,https://www.researchgate.net/profile/Antonis_Kakas/publication/221310516_Database_Updates_through_Abduction/links/00b7d518ab26387e84000000/Database-Updates-through-Abduction.pdf,1742723347275995321,"The problem of view updates in deductive databases is studied by casting this in a naturally associated abductive framework. It is shown that this abductive approach deals successfully, in a simple yet powerful way, with the difficulties related to the presence of negation in the …"
+VLDB,Instance-based_schema_matching_for_web_databases_by_domain-specific_query_probing,"J Wang, JR Wen, F Lochovsky, WY Ma",2004,252,https://books.google.co.jp/books?hl=ja&lr=lang_ja|lang_en&id=R780l9ETyw8C&oi=fnd&pg=PA408&dq=source:VLDB&ots=XJC2O0ES2l&sig=TJk8vbCSnQSydM5vs3l5Z0OS6LU,9317809196290695888,"In a Web database that dynamically provides information in response to user queries, two distinct schemas, interface schema (the schema users can query) and result schema (the schema users can browse), are presented to users. Each partially reflects the actual schema …"
+VLDB,Supporting_incremental_join_queries_on_ranked_inputs,"A Natsev, YC Chang, JR Smith, CS Li, JS Vitter",2001,255,http://www.vldb.org/conf/2001/P281.pdf,11030113766373439774,This paper investigates the problem of incremental joins of multiple ranked data sets when the join condition is a list of arbitrary user-defined predicates on the input tuples. This problem arises in many important applications dealing with ordered inputs and multiple …
+VLDB,Approximate_Query_Processing:_Taming_the_TeraBytes.,"MN Garofalakis, PB Gibbons",2001,228,http://www.vldb.org/conf/2001/tut4.pdf,11545626887968698394,"+ Seeing entire data is very helpful (provably & in practice)(But must construct synopses for a family of queries)+ Often faster: better access patterns, small synopses can reside in memory or cache+ Middleware: Can use with any DBMS, no special index striding+ Also …"
+VLDB,Window-aware_load_shedding_for_aggregation_queries_over_data_streams,"N Tatbul, S Zdonik",2006,224,http://people.csail.mit.edu/tatbul/publications/vldb06.pdf,10837530436044882003,"Data stream management systems may be subject to higher input rates than their resources can handle. When overloaded, the system must shed load in order to maintain low-latency query results. In this paper, we describe a load shedding technique for queries consisting of …"
+VLDB,An_overview_of_repository_technology,"PA Bernstein, U Dayal",1994,257,http://www.vldb.org/conf/1994/P705.PDF,8622998130847510180,"A repository is a shared database of information about engineered artifacts. We define a repository manager to be a database application that suPports checkout/checkin, version and configuration management, notification, context management, and workflow control …"
+VLDB,"Improving_business_process_quality_through_exception_understanding,_prediction,_and_prevention","D Grigori, F Casati, U Dayal, MC Shan",2001,246,http://www.vldb.org/conf/2001/P159.pdf,5071725152406394205,"Business process automation technologies are being increasingly used by many companies to improve the efficiency of both internal processes as well as of e-services offered to customers. In order to satisfy customers and employees, business processes need to be …"
+VLDB,Building_light-weight_wrappers_for_legacy_Web_data-sources_using_W4F,"A Sahuguet, F Azavant",1999,282,http://www.fing.edu.uy/inco/grupos/csi/esp/Cursos/cursos_posg/Inter2002/presentaciones/vldb99.pdf,5119390792718163390,"The Web has become a major conduit to information repositories of all kinds. Today, more than 80% of information published on the Web is generated by underlying databases (however access is granted through a Web gateway using forms as a query language and …"
+VLDB,Efficient_Processing_of_Top-k_Dominating_Queries_on_Multi-Dimensional_Data.,"ML Yiu, N Mamoulis",2007,210,http://vldb.org/conf/2007/papers/research/p483-yiu.pdf,12177040012520949591,"The top-k dominating query returns k data objects which dominate the highest number of objects in a dataset. This query is an important tool for decision support since it provides data analysts an intuitive way for finding significant objects. In addition, it combines the …"
+VLDB,Queries_independent_of_updates,"AY Levy, Y Sagiv",1993,273,http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.96.6183&rep=rep1&type=pdf,4503299026297532456,This paper considers the problem of detecting independence of a queries expressed by datalog programs from updates. We provide new insight into the independence problem by reducing it to the equivalence problem for datalog programs (both for the case of insertion …
+VLDB,Object_fusion_in_mediator_systems,"Y Papakonstantinou, S Abiteboul, H Garcia-Molina",1996,363,,882404138395242937,"In this paper, we carefully explore the assumptions behind using information capacity equivalence as a measure of correctness for judging transformed schemas in schema integration and translation methodologies. We present a classification of common …"
+VLDB,The_use_of_information_capacity_in_schema_integration_and_translation,"RJ Miller, YE Ioannidis, R Ramakrishnan",1993,282,https://pdfs.semanticscholar.org/c10f/15974e5af4e2dd4ef648eb9561a7af23191e.pdf,1780492265533408108,Х вн гбб ж а и з знзи бз б ви в зиг ж бз иг зйбб ж о и гви виз г а ж ж Й а и гвз в д жб и Ц ви зи б и гв г ей жн ж зйаи з о з гж йз в ей жн гди б о жзК а н в и джгд и гв г и з йд и з иг и зиг ж б г и в вижг й з жжгжз в и зи б и гвК Ь з д д ж дж з виз в л з бда в Й з дджг з гж в ж б ви а …
+VLDB,Fast_incremental_maintenance_of_approximate_histograms,"PB Gibbons, Y Matias, V Poosala",1997,283,http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.63.5414&rep=rep1&type=pdf,6453178254518126369,"Many decision support systems, which utilize association rules for discovering interesting patterns, require the discovery of association rules that vary over time. Such rules describe complicated temporal patterns such as events that occur on the “first working day of every …"
