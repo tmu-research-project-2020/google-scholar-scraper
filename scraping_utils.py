@@ -33,7 +33,7 @@ def make_url(keyword, conf, author, paper_id=None):
     ), "KeywordNotFoundError"
     url = "https://scholar.google.co.jp/scholar?"
     if paper_id is not None:
-        url += f"cites={paper_id}"
+        url += f"&cites={paper_id}"
     else:
         url += "&as_sdt=0%2C5"
         if keyword is not None:
@@ -251,6 +251,7 @@ def write_csv(conf, title_list, url_list, writer_list, year_list, ci_num_list, p
 
 if __name__ == "__main__":
     conf = "ICASSP"
+    conf = 'Meeting of the Association for Computational Linguistics (ACL)'	
     url = make_url(keyword=None, conf=conf, author=None)
     print(f"url: {url}")
 
