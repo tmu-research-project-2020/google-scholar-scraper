@@ -13,7 +13,7 @@ from time import sleep
 # import matplotlib.pyplot as plt
 # import matplotlib.ticker as ticker
 import numpy as np
-# import pandas as pd
+import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 
@@ -159,6 +159,22 @@ def get_id(soup):
         except:
             print("")
     return p_id_list
+
+def year_list_to_cite_years(year_list,p_year):
+    """convert year_list into cite_years
+    :param year_list,p_year:
+    :return: cite_years
+    """
+    y = [p_year+i for i in range(2021 - p_year + 1)]
+    cite_years = [0 for _ in range(2021 - p_year + 1)]
+    for year in year_list:
+        if year >= p_year:
+            cite_years[year - p_year] += 1
+
+    cite_years = pd.DataFrame(cite_years,
+                      index=y,
+                      columns=['total'])
+    return cite_years
 
 
 def grep_candidate_papers(url):
@@ -314,13 +330,7 @@ if __name__ == "__main__":
         p_id_list,
         snippet_list,
     ) = scraping_papers(url_cite)
-    write_csv(
-        conf,
-        title_list,
-        url_list,
-        writer_list,
-        year_list,
-        ci_num_list,
-        p_id_list,
-        snippet_list,
-    )
+
+    year_list = [int(s) for s in year_list]
+    cite_year = year_list_to_cite_years(year_list,int(target_paper['year']))
+    print(cite_year)
