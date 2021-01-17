@@ -19,26 +19,32 @@ import requests
 from sklearn.linear_model import LinearRegression
 
 
-def make_url(keyword, conf, author):
+def make_url(keyword, conf, author, paper_id=None):
     """ make url for search papers
+    normal search (keyword, conf, author) or target search (paper_id)
     :param keyword: str or None
     :param conf: str or None, conference information
     :param author: str or None, author information
+    :param paper_id: None or int, paper information
     :return: url
     """
     assert (
-        keyword is not None or conf is not None or author is not None
+        keyword is not None or conf is not None or author is not None or paper_id is not None
     ), "KeywordNotFoundError"
-    url = "https://scholar.google.co.jp/scholar?&hl=ja&as_sdt=0%2C5"
-    if keyword is not None:
-        url += f"&as_q={keyword}"
+    url = "https://scholar.google.co.jp/scholar?"
+    if paper_id is not None:
+        url += f"&cites={paper_id}"
     else:
-        url += "&as_q="
-    if conf is not None:
-        url += f"&as_publication={conf}"
-    if author is not None:
-        author = "+".join(author.split())
-        url += f"&as_sauthors={author}"
+        url += "&as_sdt=0%2C5"
+        if keyword is not None:
+            url += f"&as_q={keyword}"
+        else:
+            url += "&as_q="
+        if conf is not None:
+            url += f"&as_publication={conf}"
+        if author is not None:
+            author = "+".join(author.split())
+            url += f"&as_sauthors={author}"
     return url
 
 
@@ -147,6 +153,45 @@ def get_id(soup):
     return p_id_list
 
 
+def grep_candidate_papers(url):
+    """ scrape first 10 papers and choose one
+    :param url:
+    :return: target paper information (title, writer, year, citations, url, paper_id, snippet) 
+    """
+    html_doc = requests.get(url).text
+    soup = BeautifulSoup(html_doc, "html.parser")
+
+    title_list, url_list = get_title_and_url(soup)
+    writer_list, year_list = get_writer_and_year(soup)
+    ci_num_list = get_citations(soup)
+    p_id_list = get_id(soup)
+    snippet_list = get_snippet(soup)
+
+    for i in range(len(title_list)):
+        print("-"*20)
+        print(f"paper number: {str(i)}")
+        print(f"paper title: {title_list[i]}")
+        print(f"published year: {year_list[i]}")
+        print(f"citations: {ci_num_list[i]}")
+
+    target_paper_num = -1
+    while target_paper_num < 0 or target_paper_num >= len(title_list):
+        target_paper_num = int(input("Select paper number: "))
+        if target_paper_num < 0 or target_paper_num >= len(title_list):
+            print("Index out of range! Please re-enter")
+    
+    target_paper = {
+        "title": title_list[target_paper_num],
+        "writer": writer_list[target_paper_num],
+        "year": year_list[target_paper_num],
+        "citations": ci_num_list[target_paper_num],
+        "url": url_list[target_paper_num],
+        "paper_id": p_id_list[target_paper_num],
+        "snippet": snippet_list[target_paper_num],
+    }
+    return target_paper
+
+
 def scraping_papers(url):
     """ scrape 100 papers
     :param url: target url
@@ -206,7 +251,15 @@ def write_csv(conf, title_list, url_list, writer_list, year_list, ci_num_list, p
 
 if __name__ == "__main__":
     conf = "ICASSP"
+    conf = 'Meeting of the Association for Computational Linguistics (ACL)'	
     url = make_url(keyword=None, conf=conf, author=None)
     print(f"url: {url}")
-    title_list, url_list, writer_list, year_list, ci_num_list, p_id_list, snippet_list = scraping_papers(url)
+
+    # select target paper
+    target_paper = grep_candidate_papers(url)
+    print(f"target paper: {target_paper}")
+
+    # create paper list about target paper's citation
+    url_cite = make_url(keyword=None, conf=None, author=None, paper_id=target_paper['paper_id'])
+    title_list, url_list, writer_list, year_list, ci_num_list, p_id_list, snippet_list = scraping_papers(url_cite)
     write_csv(conf, title_list, url_list, writer_list, year_list, ci_num_list, p_id_list, snippet_list)
