@@ -1,35 +1,41 @@
-from bs4 import BeautifulSoup
-import argparse
+# import argparse
 import csv
-import datetime
-import difflib
-import os
-import pprint
+# import datetime
+# import difflib
+# import os
+# import pprint
 import re
 import time
-import timeit
-import warnings
+# import timeit
+# import warnings
 from time import sleep
 
-import matplotlib.pyplot as plt
-import matplotlib.ticker as ticker
+# import matplotlib.pyplot as plt
+# import matplotlib.ticker as ticker
 import numpy as np
 import pandas as pd
 import requests
-from sklearn.linear_model import LinearRegression
+from bs4 import BeautifulSoup
+
+# from sklearn.linear_model import LinearRegression
 
 
-def make_url(keyword, conf, author, paper_id=None):
-    """ make url for search papers
-    normal search (keyword, conf, author) or target search (paper_id)
+def make_url(keyword, conf, author, year, paper_id=None):
+    """make url for search papers
+    normal search (keyword, conf, author, year) or target search (paper_id)
     :param keyword: str or None
     :param conf: str or None, conference information
     :param author: str or None, author information
+    :param year: int or None, published year
     :param paper_id: None or int, paper information
     :return: url
     """
     assert (
-        keyword is not None or conf is not None or author is not None or paper_id is not None
+        keyword is not None
+        or conf is not None
+        or author is not None
+        or year is not None
+        or paper_id is not None
     ), "KeywordNotFoundError"
     url = "https://scholar.google.co.jp/scholar?"
     if paper_id is not None:
@@ -37,19 +43,21 @@ def make_url(keyword, conf, author, paper_id=None):
     else:
         url += "&as_sdt=0%2C5"
         if keyword is not None:
-            url += f"&as_q={keyword}"
+            url += f"&as_q={'%20'.join(keyword.split())}"
         else:
             url += "&as_q="
         if conf is not None:
-            url += f"&as_publication={conf}"
+            url += f"&as_publication={'%20'.join(conf.split())}"
         if author is not None:
             author = "+".join(author.split())
-            url += f"&as_sauthors={author}"
+            url += f"&as_sauthors={'%20'.join(author.split())}"
+        if year is not None:
+            url += f"&as_ylo={year}"
     return url
 
 
 def get_snippet(soup):
-    """ obtain snippet from soup
+    """obtain snippet from soup
     :param soup: parsed html by BeautifulSoup
     :return: snippet_list
     """
@@ -59,7 +67,7 @@ def get_snippet(soup):
 
 
 def get_title_and_url(soup):
-    """ obtain title and url from soup
+    """obtain title and url from soup
     :param soup: parsed html by BeautifulSoup
     :return: title_list, url_list
     """
@@ -86,7 +94,7 @@ def get_title_and_url(soup):
 
 
 def get_writer_and_year(soup):
-    """ obtain writer(author) and year from soup
+    """obtain writer(author) and year from soup
     :param soup: parsed html by BeautifulSoup
     :return: writer_list, year_list
     """
@@ -111,14 +119,14 @@ def get_writer_and_year(soup):
         year = re.sub(r"\D", "", year)
         # yearが5桁以上だった場合の例外処理
         if len(year) > 4:
-            year_list.append(year[len(year)-4 : len(year)])
+            year_list.append(year[len(year) - 4 : len(year)])
         else:
             year_list.append(year)
     return writer_list, year_list
 
 
 def get_citations(soup):
-    """ obtain number of citations from soup
+    """obtain number of citations from soup
     :param soup: parsed html by BeautifulSoup
     :return: ci_num_list
     """
@@ -132,7 +140,7 @@ def get_citations(soup):
 
 
 def get_id(soup):
-    """ obtain paper id from soup
+    """obtain paper id from soup
     :param soup: parsed html by BeautifulSoup
     :return: ci_num_list
     """
@@ -152,11 +160,27 @@ def get_id(soup):
             print("")
     return p_id_list
 
+def year_list_to_cite_years(year_list,p_year):
+    """convert year_list into cite_years
+    :param year_list,p_year:
+    :return: cite_years
+    """
+    y = [p_year+i for i in range(2021 - p_year + 1)]
+    cite_years = [0 for _ in range(2021 - p_year + 1)]
+    for year in year_list:
+        if year >= p_year:
+            cite_years[year - p_year] += 1
+
+    cite_years = pd.DataFrame(cite_years,
+                      index=y,
+                      columns=['total'])
+    return cite_years
+
 
 def grep_candidate_papers(url):
-    """ scrape first 10 papers and choose one
+    """scrape first 10 papers and choose one
     :param url:
-    :return: target paper information (title, writer, year, citations, url, paper_id, snippet) 
+    :return: target paper information (title, writer, year, citations, url, paper_id, snippet)
     """
     html_doc = requests.get(url).text
     soup = BeautifulSoup(html_doc, "html.parser")
@@ -168,7 +192,7 @@ def grep_candidate_papers(url):
     snippet_list = get_snippet(soup)
 
     for i in range(len(title_list)):
-        print("-"*20)
+        print("-" * 20)
         print(f"paper number: {str(i)}")
         print(f"paper title: {title_list[i]}")
         print(f"published year: {year_list[i]}")
@@ -179,7 +203,7 @@ def grep_candidate_papers(url):
         target_paper_num = int(input("Select paper number: "))
         if target_paper_num < 0 or target_paper_num >= len(title_list):
             print("Index out of range! Please re-enter")
-    
+
     target_paper = {
         "title": title_list[target_paper_num],
         "writer": writer_list[target_paper_num],
@@ -193,7 +217,7 @@ def grep_candidate_papers(url):
 
 
 def scraping_papers(url):
-    """ scrape 100 papers
+    """scrape 100 papers
     :param url: target url
     :return: title_list, url_list, writer_list, year_list, ci_num_list, p_id_list, snippet_list
     """
@@ -210,7 +234,7 @@ def scraping_papers(url):
     snippet_list = []
 
     for page in range(0, 100, 10):
-        print("Loading next {} results".format(page+10))
+        print("Loading next {} results".format(page + 10))
         url_tmp = url_base.format(page)
         html_doc = requests.get(url_tmp).text
         soup = BeautifulSoup(html_doc, "html.parser")
@@ -220,7 +244,7 @@ def scraping_papers(url):
         ci_num_list_tmp = get_citations(soup)
         p_id_list_tmp = get_id(soup)
         snippet_list_tmp = get_snippet(soup)
-        
+
         title_list.extend(title_list_tmp)
         url_list.extend(url_list_tmp)
         writer_list.extend(writer_list_tmp)
@@ -230,29 +254,63 @@ def scraping_papers(url):
         snippet_list.extend(snippet_list_tmp)
 
         sleep(np.random.randint(5, 10))
-    return title_list, url_list, writer_list, year_list, ci_num_list, p_id_list, snippet_list
+    return (
+        title_list,
+        url_list,
+        writer_list,
+        year_list,
+        ci_num_list,
+        p_id_list,
+        snippet_list,
+    )
 
 
-
-def write_csv(conf, title_list, url_list, writer_list, year_list, ci_num_list, p_id_list, snippet_list):
-    """ write csv
+def write_csv(
+    conf,
+    title_list,
+    url_list,
+    writer_list,
+    year_list,
+    ci_num_list,
+    p_id_list,
+    snippet_list,
+):
+    """write csv
     :param conf, title_list, url_list, writer_list, year_list, ci_num_list, snippet_list:
     :return:
     """
-    labels = ["conference", "title", "writer", "year", "citations", "url", "paper ID", "snippet"]
+    labels = [
+        "conference",
+        "title",
+        "writer",
+        "year",
+        "citations",
+        "url",
+        "paper ID",
+        "snippet",
+    ]
     path = "conf_csv/" + conf + ".csv"
     with open(path, "w") as f:
         csv_writer = csv.writer(f)
         csv_writer.writerow(labels)
         for title, url, writer, year, ci_num, p_id, snippet in zip(
-            title_list, url_list, writer_list, year_list, ci_num_list, p_id_list, snippet_list
+            title_list,
+            url_list,
+            writer_list,
+            year_list,
+            ci_num_list,
+            p_id_list,
+            snippet_list,
         ):
-            csv_writer.writerow([conf, title, writer, year, ci_num, url, p_id,  snippet])
+            csv_writer.writerow([conf, title, writer, year, ci_num, url, p_id, snippet])
+
 
 if __name__ == "__main__":
-    conf = "ICASSP"
-    conf = 'Meeting of the Association for Computational Linguistics (ACL)'	
-    url = make_url(keyword=None, conf=conf, author=None)
+    #conf = "ICASSP"
+    conf = 'arxiv'
+    keyword = "pretraining bert"
+    year = "2018"
+    url = make_url(keyword=keyword, conf=conf, author=None, year=year)
     print(f"url: {url}")
 
     # select target paper
@@ -260,6 +318,19 @@ if __name__ == "__main__":
     print(f"target paper: {target_paper}")
 
     # create paper list about target paper's citation
-    url_cite = make_url(keyword=None, conf=None, author=None, paper_id=target_paper['paper_id'])
-    title_list, url_list, writer_list, year_list, ci_num_list, p_id_list, snippet_list = scraping_papers(url_cite)
-    write_csv(conf, title_list, url_list, writer_list, year_list, ci_num_list, p_id_list, snippet_list)
+    url_cite = make_url(
+        keyword=None, conf=None, author=None, year=None, paper_id=target_paper["paper_id"]
+    )
+    (
+        title_list,
+        url_list,
+        writer_list,
+        year_list,
+        ci_num_list,
+        p_id_list,
+        snippet_list,
+    ) = scraping_papers(url_cite)
+
+    year_list = [int(s) for s in year_list]
+    cite_year = year_list_to_cite_years(year_list,int(target_paper['year']))
+    print(cite_year)
