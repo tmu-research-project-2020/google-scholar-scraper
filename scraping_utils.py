@@ -165,17 +165,23 @@ def year_list_to_cite_years(year_list,p_year):
     :param year_list,p_year:
     :return: cite_years
     """
+    year_list_int = []
+    for s in year_list:
+        try:
+            year_list_int.append(int(s))
+        except:
+            pass
     y = [p_year+i for i in range(2021 - p_year + 1)]
     cite_years = [0 for _ in range(2021 - p_year + 1)]
-    for year in year_list:
+    for year in year_list_int:
         if year >= p_year:
             cite_years[year - p_year] += 1
 
     cite_years = pd.DataFrame(cite_years,
                       index=y,
                       columns=['total'])
+    cite_years = cite_years.T
     return cite_years
-
 
 def grep_candidate_papers(url):
     """scrape first 10 papers and choose one
@@ -205,7 +211,7 @@ def grep_candidate_papers(url):
             print("Index out of range! Please re-enter")
 
     target_paper = {
-        "title": title_list[target_paper_num],
+            "title": title_list[target_paper_num],
         "writer": writer_list[target_paper_num],
         "year": year_list[target_paper_num],
         "citations": ci_num_list[target_paper_num],
@@ -331,6 +337,5 @@ if __name__ == "__main__":
         snippet_list,
     ) = scraping_papers(url_cite)
 
-    year_list = [int(s) for s in year_list]
     cite_year = year_list_to_cite_years(year_list,int(target_paper['year']))
     print(cite_year)
