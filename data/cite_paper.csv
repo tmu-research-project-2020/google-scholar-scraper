@@ -1,1 +1,2 @@
 keyword,label,title,writer,year,citations,url,paper_id,snippet
+Blind source separation,legend,A_blind_source_separation_technique_using_second-order_statistics,"A Belouchrani, K Abed-Meraim…",1997,3183,https://ieeexplore.ieee.org/abstract/document/554307/,4120535639572186036,"Separation of sources consists of recovering a set of signals of which only instantaneous linear mixtures are observed. In many situations, no a priori information on the mixing matrix is available: The linear mixture should be"" blindly"" processed. This typically occurs in …"

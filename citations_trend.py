@@ -35,7 +35,7 @@ url_cite_leg = make_url(keyword=None, conf=None, author=None, year=None, paper_i
     snippets_leg,
 ) = scraping_papers(url_cite_leg)
 cite_year_leg = year_list_to_cite_years(years_leg, int(leg_paper['year']))
-write_years_csv(cite_year_leg)
+write_years_csv(leg_paper['paper_id'],cite_year_leg)
 
 print("Please select BUZZ paper")
 buz_paper = grep_candidate_papers(url_buz)
@@ -54,4 +54,3 @@ url_cite_buz = make_url(keyword=None, conf=None, author=None, year=None, paper_i
 ) = scraping_papers(url_cite_buz)
 cite_year_buz = year_list_to_cite_years(years_buz, int(buz_paper['year']))
 write_years_csv(buz_paper['paper_id'], cite_year_buz)
-
