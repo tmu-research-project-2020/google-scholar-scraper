@@ -174,14 +174,14 @@ def year_list_to_cite_years(year_list,p_year):
     y = [p_year+i for i in range(2021 - p_year + 1)]
     cite_years = [0 for _ in range(2021 - p_year + 1)]
     for year in year_list_int:
-        if year >= p_year:
+        if year >= p_year and year <= 2021:
             cite_years[year - p_year] += 1
-
-    cite_years = pd.DataFrame(cite_years,
-                      index=y,
-                      columns=['total'])
-    cite_years = cite_years.T
-    return cite_years
+    list_return = [y, cite_years]
+#    cite_years = pd.DataFrame(cite_years,
+#                       index=y,
+#                       columns=['total'])
+#    cite_years  = cite_years.T
+    return list_return
 
 def grep_candidate_papers(url):
     """scrape first 10 papers and choose one
