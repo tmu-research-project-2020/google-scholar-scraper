@@ -1,1 +1,5 @@
 keyword,label,title,writer,year,citations,url,paper_id,snippet
+machine translation,legend,Statistical_machine_translation,P Koehn - 2009 - books.google.com,2009,1849,https://books.google.co.jp/books?hl=ja&lr=lang_ja|lang_en&id=kKYgAwAAQBAJ&oi=fnd&pg=PR11&dq=machine+translation&ots=k7xhVYd44t&sig=4XcyveRfNZk8dc_u2p5E9nQh0CA,5167346194919122795,"The dream of automatic language translation is now closer thanks to recent advances in the techniques that underpin statistical machine translation. This class-tested textbook from an active researcher in the field, provides a clear and careful introduction to the latest methods …"
+machine translation,buzz,Tensor2tensor_for_neural_machine_translation,"A Vaswani, S Bengio, E Brevdo, F Chollet…",2018,318,https://arxiv.org/abs/1803.07416,14498467024974506370,"Machine translation using deep neural networks achieved great success with sequence-to- sequence 
+models (Sutskever et al., 2014; Bahdanau et al., 2014; Cho et al., 2014) that used recur- rent 
+neural networks (RNNs) with LSTM cells (Hochreiter and Schmidhuber, 1997). The basic …"
