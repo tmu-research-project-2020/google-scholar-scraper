@@ -7,6 +7,9 @@ Google scholar から論文情報を抽出するツールを作成した。
    * （重要そうな論文順に、1ページ10件並んでいる）
 1. html を BeautifulSoup で解析。論文情報抽出。
 
+獲得可能な論文情報
+- 論文タイトル、URL、著者、発行年、引用回数、論文ID、スニペット、年毎の被引用数
+
 ## 2. 複合キーワード検索
 通常のキーワード検索だと**古い年代の有名な文献**が出てくる  
 ![Figure](./figures/machine-translation-only-keyword.png)
