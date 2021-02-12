@@ -2,7 +2,6 @@
 Google scholar から論文情報を抽出するツールを作成した。  
 * `citations_trend.py`：キーワードに関する legend, buzz 論文に関する情報を取ってくる
 * `conf_scrape.py`：会議に関する論文を100件取ってくる
-* `csv_merge.py`：会議ごとの csv を結合して、`data/papers.csv`に出力する
 * `scraping_utils.py`：Google Scholar のスクレイピングを行うために必要なツール
 
 ## 1. スクレイピングの仕組み
