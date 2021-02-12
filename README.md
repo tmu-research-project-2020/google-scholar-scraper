@@ -1,5 +1,9 @@
 # sumiyoshi\_demo
-Google scholar から論文情報を抽出するツールを作成した。
+Google scholar から論文情報を抽出するツールを作成した。  
+* `citations_trend.py`：キーワードに関する legend, buzz 論文に関する情報を取ってくる
+* `conf_scrape.py`：会議に関する論文を100件取ってくる
+* `csv_merge.py`：会議ごとの csv を結合して、`data/papers.csv`に出力する
+* `scraping_utils.py`：Google Scholar のスクレイピングを行うために必要なツール
 
 ## 1. スクレイピングの仕組み
 1. url をリクエスト
@@ -19,7 +23,7 @@ Google scholar から論文情報を抽出するツールを作成した。
 
 ---  
 
-**複合条件**（キーワード・出版名・出版年）で検索できるように修正した（今後公開予定）
+**複合条件**（キーワード・出版名・出版年）で検索できるように修正した
 1. キーワード、出版名、出版年を入力
 1. url をリクエストし、上位100件を検索
 1. 論文の情報（タイトル、著者、出版年、引用数、url、スニペット）を抽出
@@ -50,6 +54,6 @@ Google scholar から論文情報を抽出するツールを作成した。
 
 ---
 
-得られた情報を csv に保存し、**Web アプリ上で可視化**を行った
+得られた情報を csv に保存し、**Web アプリ上で可視化**を行った [[link](https://gs-visualizer-production.herokuapp.com/)]
 ![Figure](./figures/legend-info.png)
 ![Figure](./figures/legend-citations.png)
