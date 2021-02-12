@@ -25,7 +25,7 @@ conf_list = conf_list[0]
 # write new data
 for c in files:
     if c not in conf_list:
-        path_read = "conf_csv/" + c + ".csv"
+        path_read = "data/conf_csv/" + c + ".csv"
         with open(path_read, "r") as f:
             csv_reader = csv.reader(f)
             p_data = [row for row in csv_reader]

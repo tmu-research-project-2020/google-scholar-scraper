@@ -295,7 +295,7 @@ def write_csv(
         "paper ID",
         "snippet",
     ]
-    path = "conf_csv/" + conf + ".csv"
+    path = "data/conf_csv/" + conf + ".csv"
     with open(path, "w") as f:
         csv_writer = csv.writer(f)
         csv_writer.writerow(labels)
