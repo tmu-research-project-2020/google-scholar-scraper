@@ -1,4 +1,4 @@
-# sumiyoshi\_demo
+# google-scholar-scraper
 Google scholar から論文情報を抽出するツールを作成した。  
 * `citations_trend.py`：キーワードに関する legend, buzz 論文に関する情報を取ってくる
 * `conf_scrape.py`：会議に関する論文を100件取ってくる
